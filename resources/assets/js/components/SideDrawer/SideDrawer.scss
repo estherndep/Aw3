@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+/*menu toggle button*/
+.icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 4%;
+  min-width: 35px;
+  max-width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0);
+  z-index: 100;
+}
+
+.burger {
+  width: 75%;
+  height: 1px;
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+.burger::before {
+  top: -10px;
+}
+
+.burger::after {
+  top: 10px;
+}
+
+.icon.active .burger {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: none;
+}
+
+.icon.active .burger::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.icon.active .burger::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+
+.side-drawer{
+  right: -320px;
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 320px;
+  background:  rgba(0, 10, 58, 1);
+  z-index: 90;
+  -webkit-transition: right 10s ease-out;
+  transition: all 0.5s ease;
+}
+
+.side-drawer.active{
+  right: 0px;
+}
+
+.container {
+  margin-top: 80px;
+  padding: 40px;
+  overflow: auto;
+  position: relative;
+  text-transform: uppercase;
+}
+.side-drawer #main-content {
+  list-style: none;
+  margin-bottom: 60px;
+  display: block;
+  font-size: 22px;
+}
+
+.side-drawer #sub-content {
+  display: block;
+  position: relative;
+  font-size: 12px;
+}
+
+.side-drawer #sub-sub-content {
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+  left: 15px;
+  text-decoration-line: underline;
+  font-size: 10px;
+}
+.side-drawer > .container > ul {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.side-drawer > .container > ul a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #fff;
+}
