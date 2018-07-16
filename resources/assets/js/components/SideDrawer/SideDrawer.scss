@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
+
 * {
   box-sizing: border-box;
 }
@@ -8,7 +9,9 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /*menu toggle button*/
+
 .icon {
   position: absolute;
   top: 20px;
@@ -67,20 +70,19 @@ body {
   transform: rotate(-45deg);
 }
 
-
-.side-drawer{
+.side-drawer {
   right: -320px;
   position: fixed;
   top: 0px;
   height: 100vh;
   width: 320px;
-  background:  rgba(0, 10, 58, 1);
+  background: rgb(16, 23, 39);
   z-index: 90;
-  -webkit-transition: right 10s ease-out;
+  -webkit-transition: right ease-out;
   transition: all 0.5s ease;
 }
 
-.side-drawer.active{
+.side-drawer.active {
   right: 0px;
 }
 
@@ -91,6 +93,7 @@ body {
   position: relative;
   text-transform: uppercase;
 }
+
 .side-drawer #main-content {
   list-style: none;
   margin-bottom: 60px;
@@ -112,13 +115,14 @@ body {
   text-decoration-line: underline;
   font-size: 10px;
 }
-.side-drawer > .container > ul {
+
+.side-drawer>.container>ul {
   list-style: none;
   margin-top: 20px;
   padding: 0;
 }
 
-.side-drawer > .container > ul a {
+.side-drawer>.container>ul a {
   display: block;
   padding: 8px 16px;
   text-decoration: none;

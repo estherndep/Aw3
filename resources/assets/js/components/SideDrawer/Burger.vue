@@ -6,6 +6,8 @@
             <div class="burger">
             </div>
         </div>
+        <div v-bind:class= "{active: isActive}"
+         class = "full-overlay"></div>
         <drawer v-bind:class= "{active: isActive}"></drawer>
     </nav>
 </template> 
@@ -20,17 +22,19 @@ export default {
   },
   data: function() {
     return {
-      isActive: false,
-      count: 0
+      isActive: false
     };
   },
 
   methods: {
     toggleActive: function() {
       this.isActive = !this.isActive;
-      this.count += 1;
-      if (this.count == 1) {
-        console.log(this.count);
+
+      var element = document.getElementsByClassName("content");
+      if (this.isActive) {
+        element[0].classList.add("no-scroll");
+      } else {
+        element[0].classList.remove("no-scroll");
       }
     }
   },
