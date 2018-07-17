@@ -1,29 +1,3 @@
-.content.no-scroll {
-    overflow: hidden;
-}
-
-.full-overlay {
-    opacity: 0;
-    display: none;
-    z-index: 50;
-    background-color: rgba(16, 23, 39, 0.5);
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    z-index: 80;
-    -webkit-transition: all 0.4s ease-out;
-    transition: all 0.4s ease-out;
-}
-
-.full-overlay.active {
-    opacity: 1;
-    display: block;
-}
-
-nav {
-    height: 4rem;
-    background-color: #101727;
-}
 
 span.sum {
     position: relative;
@@ -44,110 +18,14 @@ h3::after {
     transition: 0.5s;
 }
 
-#blog-block h3::after,
-#contact-block h3::after {
-    margin: auto;
-}
 
 h3~p {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
-#main {
-    position: relative;
-    height: 35rem;
-    background: rgb(16, 23, 39);
-}
-
-#feature {
-    float: none;
-    margin-top: 0;
-    padding: 0;
-    top: 10rem;
-    height: 30rem;
-    background: white;
-    overflow: hidden;
-}
-
-.intro-block {
-    position: absolute !important;
-    height: 15%;
-    background: #101727;
-    text-align: left;
-    border: solid 1px rgb(255, 255, 255);
-    border-right-style: hidden;
-    padding: 2rem;
-}
-
-.intro-block#projects {
-    top: 10rem;
-    right: -0.05rem;
-}
-
-.intro-block#services {
-    bottom: 4.95rem;
-    right: -0.05rem;
-}
-
 a:hover {
     text-decoration: none !important;
-}
-
-.intro-block a {
-    position: absolute;
-    display: block;
-    color: #d7dee1 !important;
-}
-
-.intro-block a::after {
-    content: "";
-    position: absolute;
-    width: 50%;
-    height: 1px;
-    left: 0;
-    bottom: -0.5rem;
-    background-color: rgb(255, 255, 255) !important;
-    transition: 0.5s;
-}
-
-//about section
-#about-block {
-    height: 30rem;
-    margin: 8rem 2.5rem 6rem;
-    position: relative;
-}
-
-#about-content {
-    top: 0;
-    padding: 0rem 0.5rem 2rem 0.5rem;
-    overflow: hidden;
-}
-
-#about-image {
-    height: auto;
-    background-color: red;
-}
-
-#about-image img {
-    max-width: 100%;
-    height: auto;
-    margin: 4rem 1rem;
-}
-
-#services-block {
-    height: 40rem;
-    padding: 6rem 2.5rem 6rem;
-}
-
-#blog-block {
-    padding: 6rem 2.5rem 6rem;
-}
-
-.featured-blog {
-    height: 10rem;
-    background: #101727;
-    margin-bottom: 1rem;
 }
 
 .box-link {
@@ -172,7 +50,6 @@ a:hover {
     margin: 4rem 0rem 6rem 0rem !important;
 }
 
-//contact block
 .inverse {
     background-color: rgb(16, 23, 39);
     color: #d7dee1;
@@ -180,31 +57,6 @@ a:hover {
 
 .inverse h3::after {
     background-color: #d7dee1;
-}
-
-#contact-block {
-    min-height: 30rem;
-    padding: 2rem 2.5rem 2rem;
-    overflow: auto;
-}
-
-#contact-block>.box-link {
-    background-color: rgba(16, 23, 39, 0);
-    border: solid 1px #d7dee1;
-    color: #d7dee1;
-}
-
-.contact-item {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-.contact-item h6 {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    color: #d7dee1;
 }
 
 footer {
@@ -221,19 +73,4 @@ footer {
 
 footer p {
     margin: 0;
-}
-
-@media (min-width: 720px) {
-    #main {
-        height: 40rem;
-    }
-    #feature {
-        height: 35rem;
-        position: absolute;
-        margin: 0;
-        right: 4%;
-    }
-    #about-content {
-        padding: 4rem 2rem 2rem 2rem;
-    }
 }

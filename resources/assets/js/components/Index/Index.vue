@@ -106,6 +106,8 @@
 </template>
 
 <script>
+import './Index.scss';
+
 export default {
   mounted() {
     console.log("Index mounted.");

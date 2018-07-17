@@ -1,0 +1,146 @@
+.content.no-scroll {
+    overflow: hidden;
+}
+
+#blog-block h3::after,
+#contact-block h3::after {
+    margin: auto;
+}
+
+
+#main {
+    position: relative;
+    height: 35rem;
+    background: rgb(16, 23, 39);
+}
+
+#feature {
+    float: none;
+    margin-top: 0;
+    padding: 0;
+    top: 10rem;
+    height: 30rem;
+    background: white;
+    overflow: hidden;
+}
+
+.intro-block {
+    position: absolute !important;
+    height: 15%;
+    background: #101727;
+    text-align: left;
+    border: solid 1px rgb(255, 255, 255);
+    border-right-style: hidden;
+    padding: 2rem;
+}
+
+.intro-block#projects {
+    top: 10rem;
+    right: -0.05rem;
+}
+
+.intro-block#services {
+    bottom: 4.95rem;
+    right: -0.05rem;
+}
+
+
+.intro-block a {
+    position: absolute;
+    display: block;
+    color: #d7dee1 !important;
+}
+
+.intro-block a::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    left: 0;
+    bottom: -0.5rem;
+    background-color: rgb(255, 255, 255) !important;
+    transition: 0.5s;
+}
+
+//about section
+#about-block {
+    height: 30rem;
+    margin: 8rem 2.5rem 6rem;
+    position: relative;
+}
+
+#about-content {
+    top: 0;
+    padding: 0rem 0.5rem 2rem 0.5rem;
+    overflow: hidden;
+}
+
+#about-image {
+    height: auto;
+    background-color: red;
+}
+
+#about-image img {
+    max-width: 100%;
+    height: auto;
+    margin: 4rem 1rem;
+}
+
+#services-block {
+    height: 40rem;
+    padding: 6rem 2.5rem 6rem;
+}
+
+#blog-block {
+    padding: 6rem 2.5rem 6rem;
+}
+
+.featured-blog {
+    height: 10rem;
+    background: #101727;
+    margin-bottom: 1rem;
+}
+
+
+//contact block
+
+#contact-block {
+    padding: 2rem 2.5rem 4rem;
+    overflow: auto;
+    background-color: #101727;
+}
+
+#contact-block>.box-link {
+    background-color: rgba(16, 23, 39, 0);
+    border: solid 1px #d7dee1;
+    color: #d7dee1;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: #d7dee1;
+}
+
+.contact-item h6 {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+
+@media (min-width: 720px) {
+    #main {
+        height: 40rem;
+    }
+    #feature {
+        height: 35rem;
+        position: absolute;
+        margin: 0;
+        right: 4%;
+    }
+    #about-content {
+        padding: 4rem 2rem 2rem 2rem;
+    }
+}

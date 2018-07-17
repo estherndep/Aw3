@@ -35,7 +35,20 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'message'=>'required',
+        ]);
+
+        // Create Post
+        $message = new Message;
+        $message->full_name = $request->input('name');
+        $message->email = $request->input('email');
+        $message->subject = $request->input('subject');
+        $message->message = $request->input('message');
+        $message->save();
+        return redirect('/contact')->with('success', 'Post Created');
     }
 
     /**
