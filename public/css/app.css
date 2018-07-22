@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);html {
   position: absolute;
   min-width: 100%;
@@ -73,12 +74,16 @@ nav {
 }
 
 span.sum {
+=======
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);span.sum {
+>>>>>>> 2a9b26ec069f5794aa9b06da8d74945a415c9879
   position: relative;
   margin: 0 auto;
   font-size: 0.6rem;
   left: 3rem;
 }
 
+<<<<<<< HEAD
 #main {
   position: relative;
   height: 35rem;
@@ -115,12 +120,32 @@ span.sum {
 .intro-block#services {
   bottom: 4.95rem;
   right: -0.05rem;
+=======
+h3::after {
+  content: "";
+  position: relative;
+  display: block;
+  top: 1rem;
+  width: 10%;
+  height: 1px;
+  background: #101727;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+h3 ~ p {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+>>>>>>> 2a9b26ec069f5794aa9b06da8d74945a415c9879
 }
 
 a:hover {
   text-decoration: none !important;
 }
 
+<<<<<<< HEAD
 .intro-block a {
   position: absolute;
   display: block;
@@ -177,6 +202,8 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+=======
+>>>>>>> 2a9b26ec069f5794aa9b06da8d74945a415c9879
 .box-link {
   background-color: #d7dee1;
   height: 2.5rem;
@@ -212,35 +239,6 @@ h1::after {
   background-color: white;
 }
 
-#contact-block {
-  min-height: 30rem;
-  padding: 2rem 2.5rem 2rem;
-  overflow: auto;
-}
-
-#contact-block > .box-link {
-  background-color: rgba(16, 23, 39, 0);
-  border: solid 1px #d7dee1;
-  color: #d7dee1;
-}
-
-.contact-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.contact-item h6 {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  color: #d7dee1;
-}
-
 footer {
   padding: 1rem;
   color: #d7dee1;
@@ -257,6 +255,7 @@ footer p {
   margin: 0;
 }
 
+<<<<<<< HEAD
 @media (min-width: 720px) {
   #main {
     height: 40rem;
@@ -461,6 +460,8 @@ a > div:hover {
           transform: scale(1.5);
 }
 
+=======
+>>>>>>> 2a9b26ec069f5794aa9b06da8d74945a415c9879
 /*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
