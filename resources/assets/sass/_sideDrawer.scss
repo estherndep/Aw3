@@ -12,7 +12,7 @@ body {
 
 /*menu toggle button*/
 
-.icon {
+#icon {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -24,7 +24,7 @@ body {
   z-index: 100;
 }
 
-.burger {
+#burger {
   width: 75%;
   height: 1px;
   background: rgba(255, 255, 255, 1);
@@ -36,8 +36,8 @@ body {
   transition: 0.5s;
 }
 
-.burger::before,
-.burger::after {
+#burger::before,
+#burger::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -47,30 +47,30 @@ body {
   transition: 0.5s;
 }
 
-.burger::before {
+#burger::before {
   top: -10px;
 }
 
-.burger::after {
+#burger::after {
   top: 10px;
 }
 
-.icon.active .burger {
+#icon.active #burger {
   background: rgba(255, 255, 255, 0);
   box-shadow: none;
 }
 
-.icon.active .burger::before {
+#icon.active #burger::before {
   top: 0;
   transform: rotate(45deg);
 }
 
-.icon.active .burger::after {
+#icon.active #burger::after {
   top: 0;
   transform: rotate(-45deg);
 }
 
-.side-drawer {
+#side-drawer {
   right: -320px;
   position: fixed;
   top: 0px;
@@ -82,7 +82,7 @@ body {
   transition: all 0.5s ease;
 }
 
-.side-drawer.active {
+#side-drawer.active {
   right: 0px;
 }
 
@@ -94,20 +94,20 @@ body {
   text-transform: uppercase;
 }
 
-.side-drawer #main-content {
+#side-drawer #main-content {
   list-style: none;
   margin-bottom: 60px;
   display: block;
   font-size: 22px;
 }
 
-.side-drawer #sub-content {
+#side-drawer #sub-content {
   display: block;
   position: relative;
   font-size: 12px;
 }
 
-.side-drawer #sub-sub-content {
+#side-drawer #sub-sub-content {
   margin-bottom: 20px;
   display: block;
   position: relative;
@@ -116,20 +116,20 @@ body {
   font-size: 10px;
 }
 
-.side-drawer>.container>ul {
+#side-drawer>.container>ul {
   list-style: none;
   margin-top: 20px;
   padding: 0;
 }
 
-.side-drawer>.container>ul a {
+#side-drawer>.container>ul a {
   display: block;
   padding: 8px 16px;
   text-decoration: none;
   color: #fff;
 }
 
-.full-overlay {
+#full-overlay {
   opacity: 0;
   display: none;
   z-index: 50;
@@ -142,12 +142,12 @@ body {
   transition: all 0.4s ease-out;
 }
 
-.full-overlay.active {
+#full-overlay.active {
   opacity: 1;
   display: block;
 }
 
 nav {
   height: 4rem;
-  background-color: #101727;
+  background-color: #020b17;
 }

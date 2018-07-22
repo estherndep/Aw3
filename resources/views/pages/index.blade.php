@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-	<side-drawer></side-drawer>
     <div class="content">
 		
         <div id= "main">
@@ -101,7 +100,7 @@
                 <h6>61 Selly Hill, Selly Oak<br> Lagos, 105102 </h6>
                </div>
            </div>
-		   <div class = "box-link text-center center"><a>CONTACT PAGE</a></div>
+		   <a href="{{route('contact')}}"><div class = "box-link text-center center">CONTACT PAGE</div></a>
         </div>
     </div>
 

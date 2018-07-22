@@ -20,11 +20,11 @@
 }
 
 .project-block.large {
-    height: 30rem;
+    height: 28rem;
 }
 
 .project-block.small {
-    height: 15rem;
+    height: 14rem;
 }
 
 a>div {
@@ -56,4 +56,15 @@ a>div:hover {
 
 .project-block:hover img {
     transform: scale(1.5);
+}
+
+.content header{
+    background: #020b17;
+    background: 
+    linear-gradient(115deg, transparent 75%, #101727 75%) 0 0,
+    linear-gradient(245deg, transparent 75%, #101727 75%) 0 0,
+    linear-gradient(115deg, transparent 75%, #101727 75%) 7px -15px,
+    linear-gradient(245deg, transparent 75%, #101727 75%) 7px -15px,
+    #020b17;
+    background-size: 15px 30px;
 }

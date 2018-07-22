@@ -1,11 +1,14 @@
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);span.sum {
-  position: relative;
-  margin: 0 auto;
-  font-size: 0.6rem;
-  left: 3rem;
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);html {
+  position: absolute;
+  min-width: 100%;
 }
 
-h3::after {
+h1 {
+  font-size: 2.7rem !important;
+}
+
+h3::after,
+h1::after {
   content: "";
   position: relative;
   display: block;
@@ -19,20 +22,162 @@ h3::after {
   transition: 0.5s;
 }
 
+#blog-block h3::after,
+#contact-block h3::after {
+  margin: auto;
+}
+
 h3 ~ p {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.row {
+  padding: 0 !important;
+}
+
+#app {
+  height: auto;
+  min-height: 100vh;
+}
+
+.content {
+  position: relative;
+}
+
+.content.no-scroll {
+  overflow: hidden;
+}
+
+.full-overlay {
+  opacity: 0;
+  display: none;
+  z-index: 50;
+  background-color: rgba(16, 23, 39, 0.5);
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 80;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.full-overlay.active {
+  opacity: 1;
+  display: block;
+}
+
+span.sum {
+  position: relative;
+  margin: 0 auto;
+  font-size: 0.6rem;
+  left: 3rem;
+}
+
+#main {
+  position: relative;
+  height: 35rem;
+  background: #020b17;
+}
+
+#feature {
+  display: block;
+  margin: auto;
+  float: none;
+  margin-top: 0;
+  padding: 0;
+  top: 10rem;
+  height: 30rem;
+  background: white;
+  overflow: hidden;
+}
+
+.intro-block {
+  position: absolute !important;
+  height: 15%;
+  background: #020b17;
+  text-align: left;
+  border: solid 1px white;
+  border-right-style: hidden;
+  padding: 2rem;
+}
+
+.intro-block#projects {
+  top: 10rem;
+  right: -0.05rem;
+}
+
+.intro-block#services {
+  bottom: 4.95rem;
+  right: -0.05rem;
 }
 
 a:hover {
   text-decoration: none !important;
 }
 
+.intro-block a {
+  position: absolute;
+  display: block;
+  color: #d7dee1 !important;
+}
+
+.intro-block a::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  left: 0;
+  bottom: -0.5rem;
+  background-color: white !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#about-block {
+  height: 30rem;
+  margin: 8rem 2.5rem 6rem;
+  position: relative;
+}
+
+#about-content {
+  top: 0;
+  padding: 0rem 0.5rem 2rem 0.5rem;
+  overflow: hidden;
+}
+
+#about-image {
+  height: auto;
+  background-color: red;
+}
+
+#about-image img {
+  max-width: 100%;
+  height: auto;
+  margin: 4rem 1rem;
+}
+
+#services-block {
+  height: 40rem;
+  padding: 6rem 2.5rem 6rem;
+}
+
+#blog-block {
+  padding: 6rem 2.5rem 6rem;
+}
+
+.featured-blog {
+  height: 10rem;
+  background: #020b17;
+  margin-bottom: 1rem;
+}
+
 .box-link {
   background-color: #d7dee1;
-  width: 10rem;
   height: 2.5rem;
+  width: 10rem;
   color: #101727;
+  border: none;
 }
 
 .box-link.center {
@@ -53,12 +198,13 @@ a:hover {
 }
 
 .inverse {
-  background-color: #101727;
-  color: #d7dee1;
+  background-color: #020b17;
+  color: white;
 }
 
-.inverse h3::after {
-  background-color: #d7dee1;
+.inverse h3::after,
+h1::after {
+  background-color: white;
 }
 
 footer {
@@ -69,12 +215,485 @@ footer {
   width: 100%;
   text-align: center;
   font-size: 8px;
-  background-color: #101727;
+  background-color: #020b17;
   border-top: solid #d7dee1 2px;
 }
 
 footer p {
   margin: 0;
+}
+
+#message-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 17rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 4rem 2rem;
+}
+
+#image-block {
+  position: absolute;
+  top: 35rem;
+  right: 4rem;
+  height: 350px;
+  background-color: grey;
+  z-index: 80;
+}
+
+#message-sent {
+  position: relative;
+  display: block;
+  margin: auto;
+  height: 2rem;
+  width: 97%;
+  background: #d7dee1;
+  text-align: center;
+  color: #020b17;
+}
+
+h3 ~ h6 {
+  padding-top: 1rem;
+}
+
+.form-input {
+  padding: 0.5rem !important;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1.5625rem;
+}
+
+input {
+  padding: 0.5rem;
+  display: block;
+  width: 100%;
+  height: 3rem;
+  border: solid 1px;
+  background-color: inherit;
+}
+
+textarea {
+  display: block;
+  border: solid 1px;
+  height: 14rem;
+  width: 100%;
+  background-color: inherit;
+}
+
+form {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+#info-block {
+  padding: 4rem;
+  height: 40rem;
+}
+
+.info-item {
+  padding: 0;
+}
+
+.info-item h6 {
+  display: inline-block;
+}
+
+#contact,
+#address {
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+#contact-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 4rem 0rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.box-link[type="submit"] {
+  width: 97% !important;
+  display: block;
+  margin: auto;
+}
+
+#design {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  left: 0;
+  top: 0;
+  background-color: #eff2f7;
+}
+
+@media (max-width: 767px) {
+  #image-block {
+    right: 0;
+  }
+}
+
+.project-list {
+  display: block;
+  margin: auto;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  padding: 0rem !important;
+}
+
+.project-list .row {
+  min-height: 30rem;
+  margin: auto;
+}
+
+.project-block {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0.5rem !important;
+}
+
+.project-block.large {
+  height: 28rem;
+}
+
+.project-block.small {
+  height: 14rem;
+}
+
+a > div {
+  position: relative;
+  height: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a > div:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+  background-color: #4d4d4d9e;
+}
+
+.project-block:hover .overlay {
+  opacity: 1;
+}
+
+.project-block:hover img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.content header {
+  background: #020b17;
+  background: linear-gradient(115deg, transparent 75%, #101727 75%) 0 0, linear-gradient(245deg, transparent 75%, #101727 75%) 0 0, linear-gradient(115deg, transparent 75%, #101727 75%) 7px -15px, linear-gradient(245deg, transparent 75%, #101727 75%) 7px -15px, #020b17;
+  background-size: 15px 30px;
+}
+
+.content.no-scroll {
+  overflow: hidden;
+}
+
+#blog-block h3::after,
+#contact-block h3::after {
+  margin: auto;
+}
+
+.intro-block#services {
+  bottom: 4.95rem;
+  right: -0.05rem;
+}
+
+.intro-block a {
+  position: absolute;
+  display: block;
+  color: #d7dee1 !important;
+}
+
+.intro-block a::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  left: 0;
+  bottom: -0.5rem;
+  background-color: white !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#about-block {
+  height: 30rem;
+  margin: 8rem 2.5rem 6rem;
+  position: relative;
+}
+
+#about-content {
+  top: 0;
+  padding: 0rem 0.5rem 2rem 0.5rem;
+  overflow: hidden;
+}
+
+#about-image {
+  height: auto;
+  background-color: red;
+}
+
+#about-image img {
+  max-width: 100%;
+  height: auto;
+  margin: 4rem 1rem;
+}
+
+#services-block {
+  height: 40rem;
+  padding: 6rem 2.5rem 6rem;
+}
+
+#blog-block {
+  padding: 6rem 2.5rem 6rem;
+}
+
+.featured-blog {
+  height: 10rem;
+  background: #020b17;
+  margin-bottom: 1rem;
+}
+
+#contact-block {
+  padding: 2rem 2.5rem 4rem;
+  overflow: auto;
+  background-color: #020b17;
+}
+
+#contact-block .box-link {
+  background-color: #020b17;
+  border: solid 1px #d7dee1;
+  color: #d7dee1;
+}
+
+.contact-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+  color: #d7dee1;
+}
+
+.contact-item h6 {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+@media (min-width: 720px) {
+  #main {
+    height: 40rem;
+  }
+
+  #feature {
+    height: 35rem;
+    position: absolute;
+    margin: 0;
+    right: 4%;
+  }
+
+  #about-content {
+    padding: 4rem 2rem 2rem 2rem;
+  }
+}
+
+/* CSS Document */
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*menu toggle button*/
+
+#icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 4%;
+  min-width: 35px;
+  max-width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0);
+  z-index: 100;
+}
+
+#burger {
+  width: 75%;
+  height: 1px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#burger::before,
+#burger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: white;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#burger::before {
+  top: -10px;
+}
+
+#burger::after {
+  top: 10px;
+}
+
+#icon.active #burger {
+  background: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#icon.active #burger::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#icon.active #burger::after {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#side-drawer {
+  right: -320px;
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 320px;
+  background: #020b17;
+  z-index: 90;
+  -webkit-transition: right ease-out;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#side-drawer.active {
+  right: 0px;
+}
+
+.container {
+  margin-top: 80px;
+  padding: 40px;
+  overflow: auto;
+  position: relative;
+  text-transform: uppercase;
+}
+
+#side-drawer #main-content {
+  list-style: none;
+  margin-bottom: 60px;
+  display: block;
+  font-size: 22px;
+}
+
+#side-drawer #sub-content {
+  display: block;
+  position: relative;
+  font-size: 12px;
+}
+
+#side-drawer #sub-sub-content {
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+  left: 15px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  font-size: 10px;
+}
+
+#side-drawer > .container > ul {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+#side-drawer > .container > ul a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #fff;
+}
+
+#full-overlay {
+  opacity: 0;
+  display: none;
+  z-index: 50;
+  background-color: rgba(16, 23, 39, 0.5);
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 80;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+#full-overlay.active {
+  opacity: 1;
+  display: block;
+}
+
+nav {
+  height: 4rem;
+  background-color: #020b17;
 }
 
 /*!
@@ -10488,411 +11107,6 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  -webkit-transition: opacity .15s linear;
-  transition: opacity .15s linear;
-}
-
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-
-/* workaround for https://github.com/bootstrap-vue/bootstrap-vue/issues/1560 */
-
-/* source: _input-group.scss */
-
-.input-group > .input-group-prepend > .b-dropdown > .btn,
-.input-group > .input-group-append:not(:last-child) > .b-dropdown > .btn,
-.input-group > .input-group-append:last-child > .b-dropdown:not(:last-child):not(.dropdown-toggle) > .btn {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.input-group > .input-group-append > .b-dropdown > .btn,
-.input-group > .input-group-prepend:not(:first-child) > .b-dropdown > .btn,
-.input-group > .input-group-prepend:first-child > .b-dropdown:not(:first-child) > .btn {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-/* Special styling for type=range and type=color input */
-
-input.form-control[type="range"],
-input.form-control[type="color"] {
-  height: 2.25rem;
-}
-
-input.form-control.form-control-sm[type="range"],
-.input-group-sm > input.form-control[type="range"],
-.input-group-sm > .input-group-prepend > input.form-control.input-group-text[type="range"],
-.input-group-sm > .input-group-append > input.form-control.input-group-text[type="range"],
-.input-group-sm > .input-group-prepend > input.form-control.btn[type="range"],
-.input-group-sm > .input-group-append > input.form-control.btn[type="range"],
-input.form-control.form-control-sm[type="color"],
-.input-group-sm > input.form-control[type="color"],
-.input-group-sm > .input-group-prepend > input.form-control.input-group-text[type="color"],
-.input-group-sm > .input-group-append > input.form-control.input-group-text[type="color"],
-.input-group-sm > .input-group-prepend > input.form-control.btn[type="color"],
-.input-group-sm > .input-group-append > input.form-control.btn[type="color"] {
-  height: 1.9375rem;
-}
-
-input.form-control.form-control-lg[type="range"],
-.input-group-lg > input.form-control[type="range"],
-.input-group-lg > .input-group-prepend > input.form-control.input-group-text[type="range"],
-.input-group-lg > .input-group-append > input.form-control.input-group-text[type="range"],
-.input-group-lg > .input-group-prepend > input.form-control.btn[type="range"],
-.input-group-lg > .input-group-append > input.form-control.btn[type="range"],
-input.form-control.form-control-lg[type="color"],
-.input-group-lg > input.form-control[type="color"],
-.input-group-lg > .input-group-prepend > input.form-control.input-group-text[type="color"],
-.input-group-lg > .input-group-append > input.form-control.input-group-text[type="color"],
-.input-group-lg > .input-group-prepend > input.form-control.btn[type="color"],
-.input-group-lg > .input-group-append > input.form-control.btn[type="color"] {
-  height: 3rem;
-}
-
-/* Less padding on type=color */
-
-input.form-control[type="color"] {
-  padding: 0.25rem 0.25rem;
-}
-
-input.form-control.form-control-sm[type="color"],
-.input-group-sm > input.form-control[type="color"],
-.input-group-sm > .input-group-prepend > input.form-control.input-group-text[type="color"],
-.input-group-sm > .input-group-append > input.form-control.input-group-text[type="color"],
-.input-group-sm > .input-group-prepend > input.form-control.btn[type="color"],
-.input-group-sm > .input-group-append > input.form-control.btn[type="color"] {
-  padding: 0.125rem 0.125rem;
-}
-
-/* Add support for fixed layout table */
-
-table.b-table.b-table-fixed {
-  table-layout: fixed;
-}
-
-/* Busy table styling */
-
-table.b-table[aria-busy='false'] {
-  opacity: 1;
-}
-
-table.b-table[aria-busy='true'] {
-  opacity: 0.6;
-}
-
-/* Sort styling */
-
-table.b-table > thead > tr > th,
-table.b-table > tfoot > tr > th {
-  position: relative;
-}
-
-table.b-table > thead > tr > th.sorting,
-table.b-table > tfoot > tr > th.sorting {
-  padding-right: 1.5em;
-  cursor: pointer;
-}
-
-table.b-table > thead > tr > th.sorting::before,
-table.b-table > thead > tr > th.sorting::after,
-table.b-table > tfoot > tr > th.sorting::before,
-table.b-table > tfoot > tr > th.sorting::after {
-  position: absolute;
-  bottom: 0;
-  display: block;
-  opacity: 0.4;
-  padding-bottom: inherit;
-  font-size: inherit;
-  line-height: 180%;
-}
-
-table.b-table > thead > tr > th.sorting::before,
-table.b-table > tfoot > tr > th.sorting::before {
-  right: 0.75em;
-  content: '\2191';
-}
-
-table.b-table > thead > tr > th.sorting::after,
-table.b-table > tfoot > tr > th.sorting::after {
-  right: 0.25em;
-  content: '\2193';
-}
-
-table.b-table > thead > tr > th.sorting_asc::after,
-table.b-table > thead > tr > th.sorting_desc::before,
-table.b-table > tfoot > tr > th.sorting_asc::after,
-table.b-table > tfoot > tr > th.sorting_desc::before {
-  opacity: 1;
-}
-
-/* Stacked table layout */
-
-/* Derived from http://blog.adrianroselli.com/2017/11/a-responsive-accessible-table.html */
-
-/* Always stacked */
-
-table.b-table.b-table-stacked {
-  width: 100%;
-}
-
-table.b-table.b-table-stacked,
-table.b-table.b-table-stacked > tbody,
-table.b-table.b-table-stacked > tbody > tr,
-table.b-table.b-table-stacked > tbody > tr > td,
-table.b-table.b-table-stacked > tbody > tr > th,
-table.b-table.b-table-stacked > caption {
-  display: block;
-}
-
-/* Hide stuff we can't deal with, or shouldn't show */
-
-table.b-table.b-table-stacked > thead,
-table.b-table.b-table-stacked > tfoot,
-table.b-table.b-table-stacked > tbody > tr.b-table-top-row,
-table.b-table.b-table-stacked > tbody > tr.b-table-bottom-row {
-  display: none;
-}
-
-/* inter-row top border */
-
-table.b-table.b-table-stacked > tbody > tr > :first-child {
-  border-top-width: 0.4rem;
-}
-
-/* convert TD/TH contents to "cells". Caveat: child elements become cells! */
-
-table.b-table.b-table-stacked > tbody > tr > [data-label] {
-  display: grid;
-  grid-template-columns: 40% auto;
-  grid-gap: 0.25rem 1rem;
-}
-
-/* generate row cell "heading" */
-
-table.b-table.b-table-stacked > tbody > tr > [data-label]::before {
-  content: attr(data-label);
-  display: inline;
-  text-align: right;
-  overflow-wrap: break-word;
-  font-weight: bold;
-  font-style: normal;
-}
-
-@media all and (max-width: 575.99px) {
-  /* Under SM */
-
-  table.b-table.b-table-stacked-sm {
-    width: 100%;
-  }
-
-  table.b-table.b-table-stacked-sm,
-  table.b-table.b-table-stacked-sm > tbody,
-  table.b-table.b-table-stacked-sm > tbody > tr,
-  table.b-table.b-table-stacked-sm > tbody > tr > td,
-  table.b-table.b-table-stacked-sm > tbody > tr > th,
-  table.b-table.b-table-stacked-sm > caption {
-    display: block;
-  }
-
-  /* hide stuff we can't deal with, or shouldn't show */
-
-  table.b-table.b-table-stacked-sm > thead,
-  table.b-table.b-table-stacked-sm > tfoot,
-  table.b-table.b-table-stacked-sm > tbody > tr.b-table-top-row,
-  table.b-table.b-table-stacked-sm > tbody > tr.b-table-bottom-row {
-    display: none;
-  }
-
-  /* inter-row top border */
-
-  table.b-table.b-table-stacked-sm > tbody > tr > :first-child {
-    border-top-width: 0.4rem;
-  }
-
-  /* convert TD/TH contents to "cells". Caveat: child elements become cells! */
-
-  table.b-table.b-table-stacked-sm > tbody > tr > [data-label] {
-    display: grid;
-    grid-template-columns: 40% auto;
-    grid-gap: 0.25rem 1rem;
-  }
-
-  /* generate row cell "heading" */
-
-  table.b-table.b-table-stacked-sm > tbody > tr > [data-label]::before {
-    content: attr(data-label);
-    display: inline;
-    text-align: right;
-    overflow-wrap: break-word;
-    font-weight: bold;
-    font-style: normal;
-  }
-}
-
-@media all and (max-width: 767.99px) {
-  /* under MD  */
-
-  table.b-table.b-table-stacked-md {
-    width: 100%;
-  }
-
-  table.b-table.b-table-stacked-md,
-  table.b-table.b-table-stacked-md > tbody,
-  table.b-table.b-table-stacked-md > tbody > tr,
-  table.b-table.b-table-stacked-md > tbody > tr > td,
-  table.b-table.b-table-stacked-md > tbody > tr > th,
-  table.b-table.b-table-stacked-md > caption {
-    display: block;
-  }
-
-  /* hide stuff we can't deal with, or shouldn't show */
-
-  table.b-table.b-table-stacked-md > thead,
-  table.b-table.b-table-stacked-md > tfoot,
-  table.b-table.b-table-stacked-md > tbody > tr.b-table-top-row,
-  table.b-table.b-table-stacked-md > tbody > tr.b-table-bottom-row {
-    display: none;
-  }
-
-  /* inter-row top border */
-
-  table.b-table.b-table-stacked-md > tbody > tr > :first-child {
-    border-top-width: 0.4rem;
-  }
-
-  /* convert TD/TH contents to "cells". Caveat: child elements become cells! */
-
-  table.b-table.b-table-stacked-md > tbody > tr > [data-label] {
-    display: grid;
-    grid-template-columns: 40% auto;
-    grid-gap: 0.25rem 1rem;
-  }
-
-  /* generate row cell "heading" */
-
-  table.b-table.b-table-stacked-md > tbody > tr > [data-label]::before {
-    content: attr(data-label);
-    display: inline;
-    text-align: right;
-    overflow-wrap: break-word;
-    font-weight: bold;
-    font-style: normal;
-  }
-}
-
-@media all and (max-width: 991.99px) {
-  /* under LG  */
-
-  table.b-table.b-table-stacked-lg {
-    width: 100%;
-  }
-
-  table.b-table.b-table-stacked-lg,
-  table.b-table.b-table-stacked-lg > tbody,
-  table.b-table.b-table-stacked-lg > tbody > tr,
-  table.b-table.b-table-stacked-lg > tbody > tr > td,
-  table.b-table.b-table-stacked-lg > tbody > tr > th,
-  table.b-table.b-table-stacked-lg > caption {
-    display: block;
-  }
-
-  /* hide stuff we can't deal with, or shouldn't show */
-
-  table.b-table.b-table-stacked-lg > thead,
-  table.b-table.b-table-stacked-lg > tfoot,
-  table.b-table.b-table-stacked-lg > tbody > tr.b-table-top-row,
-  table.b-table.b-table-stacked-lg > tbody > tr.b-table-bottom-row {
-    display: none;
-  }
-
-  /* inter-row top border */
-
-  table.b-table.b-table-stacked-lg > tbody > tr > :first-child {
-    border-top-width: 0.4rem;
-  }
-
-  /* convert TD/TH contents to "cells". Caveat: child elements become cells! */
-
-  table.b-table.b-table-stacked-lg > tbody > tr > [data-label] {
-    display: grid;
-    grid-template-columns: 40% auto;
-    grid-gap: 0.25rem 1rem;
-  }
-
-  /* generate row cell "heading" */
-
-  table.b-table.b-table-stacked-lg > tbody > tr > [data-label]::before {
-    content: attr(data-label);
-    display: inline;
-    text-align: right;
-    overflow-wrap: break-word;
-    font-weight: bold;
-    font-style: normal;
-  }
-}
-
-@media all and (max-width: 1199.99px) {
-  /* under XL  */
-
-  table.b-table.b-table-stacked-xl {
-    width: 100%;
-  }
-
-  table.b-table.b-table-stacked-xl,
-  table.b-table.b-table-stacked-xl > tbody,
-  table.b-table.b-table-stacked-xl > tbody > tr,
-  table.b-table.b-table-stacked-xl > tbody > tr > td,
-  table.b-table.b-table-stacked-xl > tbody > tr > th,
-  table.b-table.b-table-stacked-xl > caption {
-    display: block;
-  }
-
-  /* hide stuff we can't deal with, or shouldn't show */
-
-  table.b-table.b-table-stacked-xl > thead,
-  table.b-table.b-table-stacked-xl > tfoot,
-  table.b-table.b-table-stacked-xl > tbody > tr.b-table-top-row,
-  table.b-table.b-table-stacked-xl > tbody > tr.b-table-bottom-row {
-    display: none;
-  }
-
-  /* inter-row top border */
-
-  table.b-table.b-table-stacked-xl > tbody > tr > :first-child {
-    border-top-width: 0.4rem;
-  }
-
-  /* convert TD/TH contents to "cells". Caveat: child elements become cells! */
-
-  table.b-table.b-table-stacked-xl > tbody > tr > [data-label] {
-    display: grid;
-    grid-template-columns: 40% auto;
-    grid-gap: 0.25rem 1rem;
-  }
-
-  /* generate row cell "heading" */
-
-  table.b-table.b-table-stacked-xl > tbody > tr > [data-label]::before {
-    content: attr(data-label);
-    display: inline;
-    text-align: right;
-    overflow-wrap: break-word;
-    font-weight: bold;
-    font-style: normal;
-  }
-}
-
-/* Details row styling */
-
-table.b-table > tbody > tr.b-table-details > td {
-  border-top: none;
 }
 
 .navbar-laravel {
