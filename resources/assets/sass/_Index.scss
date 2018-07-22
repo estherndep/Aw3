@@ -1,24 +1,5 @@
-html {
-    position: absolute;
-    min-width: 100%;
-}
-
-//alter fonts
-h1 {
-    font-size: 2.7rem !important;
-}
-
-h3::after,
-h1::after {
-    content: "";
-    position: relative;
-    display: block;
-    top: 1rem;
-    width: 10%;
-    height: 1px;
-    background: rgb(16, 23, 39);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    transition: 0.5s;
+.content.no-scroll {
+    overflow: hidden;
 }
 
 #blog-block h3::after,
@@ -26,67 +7,14 @@ h1::after {
     margin: auto;
 }
 
-h3~p {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.row {
-    padding: 0 !important;
-}
-
-#app {
-    height: auto;
-    min-height: 100vh;
-}
-
-.content {
-    position: relative;
-}
-
-.content.no-scroll {
-    overflow: hidden;
-}
-
-.full-overlay {
-    opacity: 0;
-    display: none;
-    z-index: 50;
-    background-color: rgba(16, 23, 39, 0.5);
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    z-index: 80;
-    -webkit-transition: all 0.4s ease-out;
-    transition: all 0.4s ease-out;
-}
-
-.full-overlay.active {
-    opacity: 1;
-    display: block;
-}
-
-nav {
-    height: 4rem;
-    background-color: #020b17;
-}
-
-span.sum {
-    position: relative;
-    margin: 0 auto;
-    font-size: 0.6rem;
-    left: 3rem;
-}
 
 #main {
     position: relative;
     height: 35rem;
-    background: #020b17;
+    background: rgb(16, 23, 39);
 }
 
 #feature {
-    display: block;
-    margin: auto;
     float: none;
     margin-top: 0;
     padding: 0;
@@ -99,7 +27,7 @@ span.sum {
 .intro-block {
     position: absolute !important;
     height: 15%;
-    background: #020b17;
+    background: #101727;
     text-align: left;
     border: solid 1px rgb(255, 255, 255);
     border-right-style: hidden;
@@ -116,9 +44,6 @@ span.sum {
     right: -0.05rem;
 }
 
-a:hover {
-    text-decoration: none !important;
-}
 
 .intro-block a {
     position: absolute;
@@ -172,48 +97,17 @@ a:hover {
 
 .featured-blog {
     height: 10rem;
-    background: #020b17;
+    background: #101727;
     margin-bottom: 1rem;
 }
 
-.box-link {
-    background-color: #d7dee1; //width: 10rem;
-    height: 2.5rem;
-    width: 10rem;
-    color: rgb(16, 23, 39);
-    border: none;
-}
-
-.box-link.center {
-    margin: auto;
-}
-
-.box-link>a {
-    display: block;
-    position: relative;
-    top: 19%;
-}
-
-.wrapper.row {
-    justify-content: space-evenly;
-    margin: 4rem 0rem 6rem 0rem !important;
-}
 
 //contact block
-.inverse {
-    background-color: #020b17;
-    color: white;
-}
-
-.inverse h3::after,
-h1::after {
-    background-color: white;
-}
 
 #contact-block {
-    min-height: 30rem;
-    padding: 2rem 2.5rem 2rem;
+    padding: 2rem 2.5rem 4rem;
     overflow: auto;
+    background-color: #101727;
 }
 
 #contact-block>.box-link {
@@ -226,30 +120,15 @@ h1::after {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+    color: #d7dee1;
 }
 
 .contact-item h6 {
     display: inline-block;
     position: relative;
     text-align: center;
-    color: #d7dee1;
 }
 
-footer {
-    padding: 1rem;
-    color: #d7dee1;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 8px;
-    background-color: #020b17;
-    border-top: solid #d7dee1 2px;
-}
-
-footer p {
-    margin: 0;
-}
 
 @media (min-width: 720px) {
     #main {

@@ -12,11 +12,16 @@
 	</head>
 
 <body>
+	<div id="app">
+
+
 	@yield('content')
 	
 	<footer>
 		<p>COPYRIGHT © 2018 AWTOMEDDIA. ALL RIGHTS RESERVED.</p>
 	</footer>
+
+	</div>
 	<script src = "{{asset('js/app.js')}}"></script>
 </body>
 </html>

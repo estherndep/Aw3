@@ -1,0 +1,59 @@
+.project-list {
+    display: block;
+    margin: auto;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    padding: 0rem !important;
+}
+
+.project-list .row {
+    min-height: 30rem;
+    margin: auto;
+}
+
+.project-block {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0.5rem !important;
+}
+
+.project-block.large {
+    height: 30rem;
+}
+
+.project-block.small {
+    height: 15rem;
+}
+
+a>div {
+    position: relative;
+    height: 100%;
+    transition: 0.5s;
+}
+
+a>div:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all .6s ease;
+    background-color: #4d4d4d9e;
+}
+
+.project-block:hover .overlay {
+    opacity: 1;
+}
+
+.project-block:hover img {
+    transform: scale(1.5);
+}

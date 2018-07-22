@@ -1,0 +1,115 @@
+#message-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 17rem;
+    flex-wrap: wrap;
+    padding: 4rem 2rem;
+}
+
+#message-block,
+#message-text {}
+
+#image-block {
+    position: absolute;
+    top: 35rem;
+    right: 4rem;
+    height: 350px;
+    background-color: grey;
+    z-index: 80;
+}
+
+#message-sent {
+    position: relative;
+    display: block;
+    margin: auto;
+    height: 2rem;
+    width: 97%;
+    background: #d7dee1;
+    text-align: center;
+    color: #020b17;
+}
+
+h3~h6 {
+    padding-top: 1rem;
+}
+
+.form-input {
+    padding: 0.5rem !important;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1.5625rem;
+}
+
+input {
+    padding: 0.5rem;
+    display: block;
+    width: 100%;
+    height: 3rem; //border: none;
+    border: solid 1px;
+    background-color: inherit;
+}
+
+textarea {
+    display: block;
+    border: solid 1px;
+    height: 14rem;
+    width: 100%;
+    background-color: inherit;
+}
+
+form {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+#info-block {
+    padding: 4rem;
+    height: 40rem;
+}
+
+.info-item {
+    padding: 0;
+}
+
+.info-item h6 {
+    display: inline-block;
+}
+
+#contact,
+#address {
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+#contact-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 4rem 0rem;
+    flex-wrap: wrap;
+}
+
+.box-link[type="submit"] {
+    width: 97% !important;
+    display: block;
+    margin: auto;
+}
+
+#design {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    left: 0;
+    top: 0;
+    background-color: #eff2f7;
+}
+
+@media (max-width: 767px) {
+    #image-block {
+        right: 0;
+    }
+}
