@@ -15,7 +15,6 @@ Route::get('/', 'PageController@index');
 Route::get('/about', 'PageController@about');
 Route::get('/projects', 'ProjectController@index');
 Route::get('/services', 'PageController@services');
-<<<<<<< HEAD
 Route::get('/contact', 'ContactController@create');
 Route::post('/contact',  'ContactController@mailToAdmin'); 
 
@@ -36,7 +35,3 @@ Route::prefix('admin')->group(function() {
     Route::get('/password/reset/{token}', 'Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');
 });
   
-=======
-Route::get('/contact', 'PageController@contact');
-Route::post('/contact', 'MessageController@store');
->>>>>>> 2a9b26ec069f5794aa9b06da8d74945a415c9879
