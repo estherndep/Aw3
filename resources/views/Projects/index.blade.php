@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
  
-<side-drawer></side-drawer>
 <div class="content" >
 <header class="inverse" style="padding: 8rem 6rem 0 6rem; height: 20rem;">
     <h1>PROJECTS</h1>

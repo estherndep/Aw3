@@ -1,0 +1,96 @@
+#abt-intro {
+    min-height: 40rem;
+    padding: 10rem 4rem;
+
+    #intro-msg {
+        height: 20rem;
+        p {
+        font-size: 1.7rem;
+        }
+    }
+    .img-block {
+        width: 75%;
+        height: 35vw;
+        background: white;
+        margin-left: auto;
+    }
+    #sub-intro {
+        padding-top: 6rem;
+
+        #sub-cntnt{
+            margin-left:  auto;
+            padding: 0;
+            position: relative;
+            left: 2rem;
+
+            p{
+                display: inline-block;
+                padding: 0;
+            }
+        }
+    }
+}
+
+#abt-focus{
+    min-height: 90rem;
+    position: relative;
+    padding: 0;
+
+    #dsgn {
+        position: absolute;
+        height: 25%;
+        width: 100%;
+        border: none;
+    }
+
+    #abt-wrap {
+        display: flex;
+        position: relative;
+        top: 15rem;
+        flex-wrap: wrap;
+    }
+
+    #focus-img{
+        position: absolute;
+        height: 40vw;
+        background-color: cadetblue;
+    }
+
+    #focus-msg{
+        height: 55rem;
+        background: #d7dee1;
+        position: absolute;
+        top: 6rem;
+        right: 0;
+    }
+}
+
+#smry{
+    
+    min-height: 70rem;
+
+    #smry .row {
+        min-height: 30rem;
+        position: relative;
+        margin-bottom: 10rem;
+    }
+
+    #smry-img,#smry-img2,#smry-content,#smry-img3{
+       
+        position: relative;
+        left: 10%;
+        height: 33vw;
+        background-color: aqua;
+        margin-bottom: 3rem;
+    }
+    #smry-img,#smry-img2,#smry-content{
+        @extend .col-12;
+    }
+    #smry-img3{
+        @extend .col-10;
+    }
+
+    #smry-img2, #smry-img3{
+        top:-40%;
+    }
+}

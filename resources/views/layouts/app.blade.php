@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="csrf-token" content="{{csrf_token()}}">
 		<script>window.laravel = {csrf_token: '{{csrf_token()}}'} </script>
-		<title>test</title>
+		<title>@yield('title')</title>
 
 		<link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
 	</head>
@@ -14,7 +14,13 @@
 <body>
 	<div id="app">
     <nav>
-        <div id="icon" onClick = "toggleActive()">
+		<div class="scl-icons">
+			<i class="fab fa-twitter"></i>
+			<i class="fab fa-instagram"></i>
+			<i class="fab fa-facebook-f"></i>
+		</div>
+		
+        <div id="icon">
             <div id="burger">
             </div>
         </div>
@@ -23,18 +29,14 @@
 			<div class="container">
 				<ul>
 					<div id="main-content">
-						<li><a>Projects</a></li>
-						<li><a>Services</a></li>
+						<li><p>01</p><a href="{{route('projects')}}">Projects</a></li>
+						<li><p>02</p><a href="{{route('services')}}">Services</a></li>
 					</div>
 					<div id="sub-content">
-						<li><a style="color: darkred">Tesla</a></li>
-						<div id="sub-sub-content">
-							<li><a>Products</a></li>
-							<li><a>Services</a></li>
-						</div>
+						<li><a style="color: darkred">TIS</a></li>
 						<li><a>About</a></li>
-						<li><a>Blog</a></li>
-						<li><a>Contact us</a></li>
+						<li><a href="{{route('blog.index')}}">Blog</a></li>
+						<li><a href="{{route('contact')}}">Contact us</a></li>
 					</div>
 				</ul>
 			</div>

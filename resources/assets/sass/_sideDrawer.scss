@@ -1,14 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
 
 /*menu toggle button*/
 
@@ -70,51 +62,71 @@ body {
   transform: rotate(-45deg);
 }
 
+nav .scl-icons{
+  position: absolute;
+  color: white;
+  left: 2%;
+  padding-top: 1.5rem;
+  z-index: 10;
+  font-size: 1rem;
+
+    i{
+      @extend .pr-4;
+    }
+}
 #side-drawer {
   right: -320px;
   position: fixed;
   top: 0px;
-  height: 100vh;
+  min-height: 100vh;
   width: 320px;
   background: #020b17;
   z-index: 90;
   -webkit-transition: right ease-out;
   transition: all 0.5s ease;
+
+  .container {
+    margin-top: 80px;
+    padding: 40px;
+    overflow: auto;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  a{
+    display: inline-block;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  p{
+    display: inline-block;
+    font-size:0.65rem;
+    color: #fff;
+  }
 }
 
 #side-drawer.active {
   right: 0px;
 }
 
-.container {
-  margin-top: 80px;
-  padding: 40px;
-  overflow: auto;
-  position: relative;
-  text-transform: uppercase;
-}
-
 #side-drawer #main-content {
   list-style: none;
   margin-bottom: 60px;
   display: block;
-  font-size: 22px;
+  font-size: 1.7rem;
+  font-weight: 100;
 }
 
 #side-drawer #sub-content {
   display: block;
   position: relative;
-  font-size: 12px;
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding-left: 0.8rem; 
 }
 
-#side-drawer #sub-sub-content {
-  margin-bottom: 20px;
-  display: block;
-  position: relative;
-  left: 15px;
-  text-decoration-line: underline;
-  font-size: 10px;
-}
 
 #side-drawer>.container>ul {
   list-style: none;
@@ -122,12 +134,6 @@ body {
   padding: 0;
 }
 
-#side-drawer>.container>ul a {
-  display: block;
-  padding: 8px 16px;
-  text-decoration: none;
-  color: #fff;
-}
 
 #full-overlay {
   opacity: 0;
@@ -147,7 +153,10 @@ body {
   display: block;
 }
 
-nav {
-  height: 4rem;
-  background-color: #020b17;
+@media(max-width:768px){
+  nav .scl-icons{
+    font-size: 1rem;
+    width: 10%;
+  }
 }
+

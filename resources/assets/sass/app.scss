@@ -1,15 +1,45 @@
 // Fonts
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+@font-face {
+  font-family: Hero;
+  src: url('/fonts/Hero/Herol.otf');
+  font-weight: 100;
+}
+
+
+
+@font-face {
+  font-family: Hero;
+  src: url('/fonts/Hero/Hero.otf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Moon;
+  src: url('/fonts/moon/MoonR.otf');
+  font-weight: 300;
+}
 // Variables
 @import "variables";
 @import "main";
 @import "contact";
 @import "project";
+@import "blog";
 @import "index";
 @import "sideDrawer";
+@import "about";
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+      -ms-transform: $property;
+          transform: $property;
+}
 
 .navbar-laravel {
   background-color: #fff;
