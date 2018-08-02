@@ -31,7 +31,7 @@
                         pellentesque auctor ut tellus, porttitor magnis morbi vel accumsan
                         ligula lacus.
                     </p>
-                    <div class = "box-link text-center"><a>KNOW MORE</a></div>
+                    <div class = "box-link text-center"><a href="{{route('about')}}">KNOW MORE</a></div>
                 </div>
 
 
@@ -168,7 +168,7 @@
                     Partners in Offering the best home automation experience
                     with the best Price.
                     </p>
-                    <div class = "box-link text-center"><a>KNOW MORE</a></div>
+                    <div class = "box-link text-center"><a href="{{route('tis')}}">KNOW MORE</a></div>
                 </div>
             </div>  
             <div id="tis-carousel" class="carousel slide row" data-ride="carousel" data-interval="5000">
@@ -219,7 +219,7 @@
                 </div>
                 
             </div>
-		    <div class = "box-link text-center center"><a>SHOW MORE</a></div>
+		    <div class = "box-link text-center m-auto"><a href="{{route('blog.index')}}">SHOW MORE</a></div>
 	
         </section>
 
@@ -245,7 +245,7 @@
                 <h6>61 Selly Hill, Selly Oak<br> Lagos, 105102 </h6>
                </div>
            </div>
-		   <div class = "box-link text-center center"><a href="{{route('contact')}}">CONTACT PAGE</a></div>
+		   <div class = "box-link text-center m-auto"><a href="{{route('contact')}}">CONTACT PAGE</a></div>
         </section>
     </div>
 

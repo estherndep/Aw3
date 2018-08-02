@@ -1,0 +1,28 @@
+#main {
+    #img-row {
+        @extend .container,
+        .col-10,
+        .m-auto,
+        .position-relative;
+        top: -20%;
+        z-index: 10;
+    }
+    .sngl-img {
+        @extend .col-3;
+    }
+}
+
+#service-content {
+    margin-top: 15rem;
+    .sngl-service {
+        @extend .col-md-6,
+        .col-lg-4;
+        height: 26vw;
+        padding: 2rem !important;
+        div {
+            width: 100%;
+            height: 100%;
+            border: solid 0.2rem #020b17;
+        }
+    }
+}

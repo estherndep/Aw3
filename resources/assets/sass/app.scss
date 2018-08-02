@@ -3,14 +3,11 @@
 @import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
-
 @font-face {
   font-family: Hero;
   src: url('/fonts/Hero/Herol.otf');
   font-weight: 100;
 }
-
-
 
 @font-face {
   font-family: Hero;
@@ -23,6 +20,7 @@
   src: url('/fonts/moon/MoonR.otf');
   font-weight: 300;
 }
+
 // Variables
 @import "variables";
 @import "main";
@@ -32,13 +30,13 @@
 @import "index";
 @import "sideDrawer";
 @import "about";
+@import "services";
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
-
 @mixin transform($property) {
   -webkit-transform: $property;
-      -ms-transform: $property;
-          transform: $property;
+  -ms-transform: $property;
+  transform: $property;
 }
 
 .navbar-laravel {

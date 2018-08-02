@@ -18,28 +18,23 @@
     height: 32.9rem;
     background: white;
     overflow: hidden;
-    
-
-    #feature-img{
+    #feature-img {
         height: 100%;
         width: 100%;
         background-size: cover;
-        
     }
-
-    .overlay{
+    .overlay {
         opacity: 1;
         background-color: rgba(16, 23, 39, 0.5);
         border: solid 0.05rem white;
     }
 }
 
-
-
 #blog-block h3::after,
 #contact-block h3::after {
     margin: auto;
 }
+
 .intro-block {
     position: absolute !important;
     height: 20%;
@@ -52,17 +47,13 @@
 }
 
 .intro-block {
-
     a {
         position: absolute;
         display: block;
         color: white !important;
         font-size: 1.5rem;
         font-weight: 300;
-        
-       
     }
-
     a::after {
         content: "";
         position: absolute;
@@ -73,13 +64,12 @@
         background-color: rgb(255, 255, 255) !important;
         transition: 0.5s;
     }
-
-    a:hover{
+    a:hover {
         text-decoration: none;
     }
 }
 
-.intro-block:hover{
+.intro-block:hover {
     max-width: 40%;
 }
 
@@ -93,13 +83,8 @@
     right: -0.05rem;
 }
 
-
-
-
-
-
 //about section
-#about-block{
+#about-block {
     margin-top: 10rem;
     margin-bottom: 6rem;
     position: relative;
@@ -114,15 +99,13 @@
 
 #about-image {
     height: 58vw;
-
-    .block-img{
+    .block-img {
         position: absolute;
         right: 7%;
         top: 4.2rem;
         background-size: cover;
         height: 70%;
         width: 60%;
-
         .tp-corner {
             position: absolute;
             width: 40%;
@@ -144,10 +127,6 @@
     }
 }
 
-
-
-
-
 #about-image img {
     max-width: 100%;
     height: auto;
@@ -155,31 +134,26 @@
 }
 
 #services-block {
-   
     padding: 0;
 }
 
-.service-slide-block{
+.service-slide-block {
     display: inline-block;
     height: 75vw;
     border-left: solid 1px #7b848c;
     padding: 0 !important;
-
 }
 
-
-
-.carousel p{
+.carousel p {
     max-width: 70%;
 }
 
-
-.slim, .wide{
-    background-size:cover; 
+.slim,
+.wide {
+    background-size: cover;
 }
 
 // change carousel height
-
 #services-carousel .carousel-item {
     height: 100vw;
     img {
@@ -188,40 +162,37 @@
         left: 0;
         min-height: 100vw;
     }
-    
-  }
-.service-slide-block, #services-carousel .carousel-item{
-  .overlay{
-    opacity: 1;
-    background-color: rgba(16, 16, 27, 0.6);
+}
 
-    h4{
-        text-transform: uppercase;
-        @extend .pb-4;
-    }
-    h4,p{
-      position: relative;
-      color: white;
-    }
-
-
-    .caption{
-        position: absolute;
-        left: 5%;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 2rem;
+.service-slide-block,
+#services-carousel .carousel-item {
+    .overlay {
+        opacity: 1;
+        background-color: rgba(16, 16, 27, 0.6);
+        h4 {
+            text-transform: uppercase;
+            @extend .pb-4;
+        }
+        h4,
+        p {
+            position: relative;
+            color: white;
+        }
+        .caption {
+            position: absolute;
+            left: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 2rem;
+        }
     }
 }
-}
-  
-
 
 //TIS
-
-#tis-block{
+#tis-block {
     position: relative;
 }
+
 #tis-content {
     min-height: 20rem;
     padding: 6rem 2.5rem 6rem;
@@ -234,25 +205,26 @@
     bottom: -10%;
     border: solid 0.5rem #020b17;
     border-right: hidden;
-
     .carousel-item {
-    height: 25vw;
-    width: 50vw;
-        .sngl-itm{
+        height: 25vw;
+        width: 50vw;
+        .sngl-itm {
             height: 25vw;
             background-size: cover;
         }
     }
-
-    
 }
 
 @keyframes load {
-    from {width:0%;}
-    to {width:100%;}
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
 }
 
-#ld-br{
+#ld-br {
     position: absolute;
     width: 0%;
     height: 0.4rem;
@@ -261,41 +233,31 @@
     animation: load 5000ms infinite;
 }
 
-
-
-#projects-carousel.carousel{
-    position: absolute;;
+#projects-carousel.carousel {
+    position: absolute;
+    ;
 }
 
 #blog-block {
     padding: 6rem 2.5rem 6rem;
-    text-align:center;
+    text-align: center;
 }
 
 .featured-blog {
-    @extend .col-5, .col-md-2 ;
+    @extend .col-5,
+    .col-md-2;
     height: 14vw;
     background: #020b17;
     margin-bottom: 1rem;
 }
 
-
-
 //contact block
-
 #contact-block {
     position: relative;
     padding: 2rem 2.5rem 4rem;
     overflow: auto;
     background-color: #020b17;
     z-index: 10;
-}
-
-#contact-block .box-link {
-    background-color: #020b17;
-    border: solid 1px white;
- 
-    
 }
 
 .contact-item {
@@ -310,10 +272,6 @@
     text-align: center;
 }
 
-
-
-
-
 @media (min-width: 720px) {
     #feature {
         position: absolute;
@@ -325,11 +283,11 @@
     }
 }
 
-@media (max-width: 768px){
-    #services-block{
+@media (max-width: 768px) {
+    #services-block {
         display: none;
     }
-    .carousel{
+    .carousel {
         display: block;
     }
     /*.service-slide-block .slim{
@@ -339,58 +297,50 @@
     .service-slide-block .wide{
         display: block;
     }*/
-    .intro-block a{
+    .intro-block a {
         font-size: 1rem;
     }
-    
 }
-@media (min-width: 768px){
-    #services-carousel{
+
+@media (min-width: 768px) {
+    #services-carousel {
         display: none;
     }
-    .service-slide-block .slim{
+    .service-slide-block .slim {
         display: block;
     }
-
-    .service-slide-block .wide{
+    .service-slide-block .wide {
         display: none;
     }
-
-    .service-slide-block{
+    .service-slide-block {
         height: 55vw;
     }
-    
 }
 
-@media (max-width: 768px){
-    .featured-blog{
+@media (max-width: 768px) {
+    .featured-blog {
         height: 22vw;
     }
-
-    #about-image{
-        height:70vw;
+    #about-image {
+        height: 70vw;
     }
-
     .intro-block:hover {
         max-width: 55%;
     }
 }
 
-@media (min-width: 992px){
-    .service-slide-block{
+@media (min-width: 992px) {
+    .service-slide-block {
         height: 40vw;
     }
-
-
-#tis-carousel {
-
-    .carousel-item {
-    height: 20vw;
-    width: 40vw;
-        .sngl-itm{
+    #tis-carousel {
+        .carousel-item {
             height: 20vw;
-            background-size: cover;
+            width: 40vw;
+            .sngl-itm {
+                height: 20vw;
+                background-size: cover;
+            }
         }
     }
-}
 }
