@@ -5,24 +5,27 @@
             <section id="main" style="
                     color: white;
                 ">
-                <header class="inverse" style="padding: 8rem 6rem 0 6rem; height: 100%;">
-                        <h1>SERVICES</h1>
-                        <div></div>
+                <header class="inverse" style="height: 100%;" >
+                        <div style="padding: 8rem 6rem 0 6rem; height: 100%;">
+                                <h1>SERVICES</h1>
+                                <div></div>
+                        </div>
+                        
                 </header>
                 <div id="img-row">
                         <div class="row">
-                                <div class="sngl-img" style="background-color:  #d7dee1;height: 18vw;"></div>
-                                <div class="sngl-img" style="background-color:  #d7dee1;height: 18vw;"></div>
-                                <div class="sngl-img" style="background-color:  #d7dee1;height: 18vw;"></div>
-                                <div class="sngl-img" style="background-color:  #d7dee1;height: 18vw;"></div>
+                                <div class="sngl-img" style="background-color:  #d7dee1;"></div>
+                                <div class="sngl-img" style="background-color:  #d7dee1;"></div>
+                                <div class="sngl-img" style="background-color:  #d7dee1;"></div>
+                                <div class="sngl-img" style="background-color:  #d7dee1;"></div>
                         </div>
                 </div>
                 
             </section>
             <section id="service-content">
                 <div class="row ml-auto mr-auto" style="margin-top: 25rem; width:90%">
-                        <div class="col-md-6 col-lg-4" style="background-color: rgb(215, 222, 225);height: 26vw;padding: 2rem;">
-                                <div class="col-12" style="height:100%; background-color:white;">
+                        <div class="sngl-service">
+                                <div class="col-12" >
                                     <h3 style=" margin-bottom:2rem;">UNMATCHED
                                             SERVICES.
                                             UNMATCHED

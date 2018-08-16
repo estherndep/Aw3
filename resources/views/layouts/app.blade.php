@@ -34,7 +34,7 @@
 					</div>
 					<div id="sub-content">
 						<li><a style="color: darkred">TIS</a></li>
-						<li><a>About</a></li>
+						<li><a href="{{route('about')}}">About</a></li>
 						<li><a href="{{route('blog.index')}}">Blog</a></li>
 						<li><a href="{{route('contact')}}">Contact us</a></li>
 					</div>
