@@ -11,16 +11,22 @@
 |
 */
 
-Route::get('/', 'PageController@index');
-Route::get('/about', 'PageController@about');
-Route::get('/projects', 'ProjectController@index');
-Route::get('/services', 'PageController@services');
-<<<<<<< HEAD
-Route::get('/contact', 'ContactController@create');
+Route::get('/', 'IndexController@index')->name('index');
+Route::get('/about', 'PageController@about')->name('about');
+Route::get('/projects', 'ProjectController@index')->name('projects');
+Route::get('/services', 'PageController@services')->name('services');
+Route::get('/contact', 'ContactController@create')->name('contact');
 Route::post('/contact',  'ContactController@mailToAdmin'); 
+Route::get('/tis',  'PageController@tis')->name('tis'); 
 
 
-Auth::routes();
+Route::resource('blog', 'BlogController');
+
+Route::get('/demo', function(){
+    return view('blog.single');
+});
+
+
 
 
 Route::prefix('admin')->group(function() {
@@ -36,7 +42,3 @@ Route::prefix('admin')->group(function() {
     Route::get('/password/reset/{token}', 'Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');
 });
   
-=======
-Route::get('/contact', 'PageController@contact');
-Route::post('/contact', 'MessageController@store');
->>>>>>> 2a9b26ec069f5794aa9b06da8d74945a415c9879

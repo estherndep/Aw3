@@ -1,0 +1,145 @@
+.blog-logo {
+    display: inline-block;
+    position: absolute;
+    padding-top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+        p {
+            display: inline-block;
+            font-size: 2.5rem;
+        }
+}
+
+#post-container{
+    padding-top: 14rem;
+    padding-bottom: 12rem;
+
+    .flex-column{
+        @extend .ml-auto, .mr-auto;
+        width: 30%;
+    }
+    .blog-desc{
+        bottom: 0;
+        right: 0;
+        height: 14rem;
+        display: block;
+        background: white;
+        padding: 2em;
+        color: #020b17;
+    
+        h6,a{
+        
+        font-weight: 700;
+        color: #020b17;
+        }
+    
+        .meta {
+            text-transform: uppercase;
+            font-size: 14px;
+            span{
+                color: #020b17;
+                @extend .pr-2;
+            }
+        }
+    }
+
+    .blog-cont {
+        margin-bottom: 2rem;
+        overflow: hidden;
+    }
+    
+    .img-cont.sm {
+        height: 12rem;
+        overflow: hidden;
+    }
+
+    .img-cont.bg {
+        height: 18rem;
+        overflow: hidden;
+        background-size: cover;
+    } 
+    
+}
+
+.single.post-container{
+    margin: 0;
+    .blog-img{
+        position: relative;
+        height: 60vw;
+        overflow: hidden;
+        background-size: cover;
+    }
+    .blog-desc{
+        padding: 6em;    
+        left: 5%;
+        width: 80%;
+
+    }
+    .overlay{
+        background-color: #00000066;
+        opacity: 1;
+    }
+}
+
+blockquote {
+    padding: 1rem;
+    background: #f2f2f2;
+    border-left: solid #020b17;
+    font-style: italic;
+    color: #999999;
+}
+
+#cat-block{
+    ul{
+        list-style: none;
+    }
+    a{
+        @extend .p-1, .mb-2;
+        display: block;
+        border-left: solid #020b17 0.1rem;
+    }
+}
+
+#pop-block{
+    text-align: center;
+
+    a{
+        @extend .p-4,.col-10,.col-md-6,.col-lg-3,.m-auto; 
+    }
+
+    img{
+         height: 15vw;
+    }
+}
+
+@media (max-width: 992px){
+    #blog-carousel .carousel-item .blog-desc{
+        width: 90%;
+        left: 5%;
+    }
+
+    #pop-block img {
+        height: 25vw;
+    }
+    #post-container {
+        .flex-column {
+            width:80%;}
+    }
+
+}
+
+
+@media (max-width: 768px){
+    #pop-block img {
+        height: 50vw;
+    }
+    .blog-logo p {
+        font-size: 1.8rem;
+    }
+    #post-container {
+        padding-top: 9rem;
+    }
+    
+}
+

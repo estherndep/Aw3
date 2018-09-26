@@ -1,4 +1,30 @@
-<<<<<<< HEAD
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    nav,
+    #app,
+    footer {
+        font-family: 'Hero', 'Helvetica', 'Arial narrow', sans-serif;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a {
+            font-weight: 100;
+        }
+        p {
+            font-family: 'Montserrat';
+            font-weight: 100;
+        }
+    }
+}
+
 html {
     position: absolute;
     min-width: 100%;
@@ -34,18 +60,23 @@ h3~p {
 
 .row {
     padding: 0 !important;
+    margin: 0 !important;
 }
 
 #app {
-    height: auto;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: visible;
+    .no-scroll {
+        overflow: hidden;
+    }
 }
 
 .content {
     position: relative;
+    overflow: hidden;
 }
 
-.content.no-scroll {
+#app.no-scroll {
     overflow: hidden;
 }
 
@@ -67,156 +98,46 @@ h3~p {
     display: block;
 }
 
-nav {
-    height: 4rem;
-    background-color: #020b17;
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: all .6s ease;
+    background-color: rgba(2, 5, 49, 0.2);
 }
-=======
->>>>>>> 2a9b26ec069f5794aa9b06da8d74945a415c9879
 
 span.sum {
     position: relative;
     margin: 0 auto;
     font-size: 0.6rem;
-    left: 3rem;
+    left: 1rem;
 }
 
-<<<<<<< HEAD
-#main {
-    position: relative;
-    height: 35rem;
-    background: #020b17;
-}
-
-#feature {
-    display: block;
-    margin: auto;
-    float: none;
-    margin-top: 0;
-    padding: 0;
-    top: 10rem;
-    height: 30rem;
-    background: white;
-    overflow: hidden;
-}
-
-.intro-block {
-    position: absolute !important;
-    height: 15%;
-    background: #020b17;
-    text-align: left;
-    border: solid 1px rgb(255, 255, 255);
-    border-right-style: hidden;
-    padding: 2rem;
-}
-
-.intro-block#projects {
-    top: 10rem;
-    right: -0.05rem;
-}
-
-.intro-block#services {
-    bottom: 4.95rem;
-    right: -0.05rem;
-=======
-h3::after {
-    content: "";
-    position: relative;
-    display: block;
-    top: 1rem;
-    width: 10%;
-    height: 1px;
-    background: rgb(16, 23, 39);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    transition: 0.5s;
-}
-
-
-h3~p {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
->>>>>>> 2a9b26ec069f5794aa9b06da8d74945a415c9879
-}
-
-a:hover {
-    text-decoration: none !important;
-}
-
-<<<<<<< HEAD
-.intro-block a {
-    position: absolute;
-    display: block;
-    color: #d7dee1 !important;
-}
-
-.intro-block a::after {
-    content: "";
-    position: absolute;
-    width: 50%;
-    height: 1px;
-    left: 0;
-    bottom: -0.5rem;
-    background-color: rgb(255, 255, 255) !important;
-    transition: 0.5s;
-}
-
-//about section
-#about-block {
-    height: 30rem;
-    margin: 8rem 2.5rem 6rem;
-    position: relative;
-}
-
-#about-content {
-    top: 0;
-    padding: 0rem 0.5rem 2rem 0.5rem;
-    overflow: hidden;
-}
-
-#about-image {
-    height: auto;
-    background-color: red;
-}
-
-#about-image img {
-    max-width: 100%;
-    height: auto;
-    margin: 4rem 1rem;
-}
-
-#services-block {
-    height: 40rem;
-    padding: 6rem 2.5rem 6rem;
-}
-
-#blog-block {
-    padding: 6rem 2.5rem 6rem;
-}
-
-.featured-blog {
-    height: 10rem;
-    background: #020b17;
-    margin-bottom: 1rem;
-}
-
-=======
->>>>>>> 2a9b26ec069f5794aa9b06da8d74945a415c9879
 .box-link {
     background-color: #d7dee1; //width: 10rem;
     height: 2.5rem;
     width: 10rem;
     color: rgb(16, 23, 39);
     border: none;
+    a {
+        display: block;
+        position: relative;
+        top: 19%;
+        color: inherit;
+    }
+    a:hover {
+        text-decoration: none;
+    }
 }
 
-.box-link.center {
-    margin: auto;
-}
-
-.box-link>a {
-    display: block;
-    position: relative;
-    top: 19%;
+.box-link:hover {
+    background: #020b17;
+    color: white;
 }
 
 .wrapper.row {
@@ -227,6 +148,19 @@ a:hover {
 .inverse {
     background-color: #020b17;
     color: white;
+    .box-link {
+        background-color: #020b17;
+        border: solid 1px #d7dee1;
+        a {
+            color: white;
+        }
+    }
+    .box-link:hover {
+        background: #d7dee1;
+        a {
+            color: #020b17;
+        }
+    }
 }
 
 .inverse h3::after,
@@ -236,16 +170,27 @@ h1::after {
 
 footer {
     padding: 1rem;
-    color: #d7dee1;
+    color: white;
     position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-size: 8px;
+    font-size: 0.7rem;
     background-color: #020b17;
     border-top: solid #d7dee1 2px;
 }
 
 footer p {
     margin: 0;
+}
+
+a>div {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+img {
+    width: 100%;
 }

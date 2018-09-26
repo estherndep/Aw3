@@ -17,6 +17,10 @@ class PageController extends Controller
         return view('pages.about')->with('title', $title);
     }
 
+    public function tis(){
+        $title = 'TIS';
+        return view('pages.tis')->with('title', $title);
+    }
 
     public function services(){
         $data = array(
@@ -24,13 +28,6 @@ class PageController extends Controller
             'services' => ['Web Design', 'Programming', 'SEO']
         );
         return view('pages.services')->with($data);
-    }
-
-    public function contact(){
-        $data = array(
-            'title' => 'Contact us',
-        );
-        return view('pages.contact')->with($data);
     }
     
 }

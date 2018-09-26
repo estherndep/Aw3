@@ -36,5 +36,9 @@ class Admin extends Authenticatable
         $this->notify(new AdminResetPasswordNotification($token));
     }
 
+    public function posts(){
+        return $this->hasMany('App\Post');
+    }
+
 
 }
