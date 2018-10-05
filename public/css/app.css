@@ -1,19 +1,22 @@
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);@import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500);@import url(https://fonts.googleapis.com/css?family=Montserrat:300);@font-face {
-  font-family: Hero;
-  src: url("/fonts/Hero/Herol.otf");
-  font-weight: 100;
-}
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);@import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);@import url(https://fonts.googleapis.com/css?family=Montserrat:300);@charset "UTF-8";
 
 @font-face {
   font-family: Hero;
-  src: url("/fonts/Hero/Hero.otf");
-  font-weight: 300;
+  src: url("/fonts/Hero/Herol.otf");
+  font-weight: 100,300;
 }
 
 @font-face {
   font-family: Moon;
   src: url("/fonts/moon/MoonR.otf");
   font-weight: 300;
+}
+
+@font-face {
+  font-family: icomoon;
+  src: url("/fonts/icomoon/icomoon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -1261,6 +1264,16 @@ nav .scl-icons {
   width: 100%;
   height: 100%;
   border: solid 0.2rem #020b17;
+  position: relative;
+}
+
+#service-content .sngl-service .sngl-inner .sngl-icon {
+  height: 80px;
+  width: 120px;
+  position: absolute;
+  background-color: #f5f8fa;
+  right: 40px;
+  top: -40px;
 }
 
 @media (max-width: 992px) {
@@ -1285,6 +1298,121 @@ nav .scl-icons {
   #main #img-row {
     bottom: 30vw;
   }
+}
+
+[class^="i-"],
+[class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 80px;
+  color: #020b17;
+  position: relative;
+  left: 20%;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-number:before {
+  content: "\E900";
+}
+
+.i-number1:before {
+  content: "\E901";
+}
+
+.i-number2:before {
+  content: "\E902";
+}
+
+.i-number3:before {
+  content: "\E903";
+}
+
+.i-number4:before {
+  content: "\E904";
+}
+
+.i-number5:before {
+  content: "\E905";
+}
+
+.i-monitor:before {
+  content: "\E906";
+}
+
+.i-camera:before {
+  content: "\E907";
+}
+
+.i-film:before {
+  content: "\E908";
+}
+
+.i-film1:before {
+  content: "\E909";
+}
+
+.i-radio:before {
+  content: "\E90A";
+}
+
+.i-locked:before {
+  content: "\E90B";
+}
+
+.i-lamp:before {
+  content: "\E90C";
+}
+
+.i-stats:before {
+  content: "\E90D";
+}
+
+.i-profile:before {
+  content: "\E90E";
+}
+
+.i-safe:before {
+  content: "\E90F";
+}
+
+.i-presentation:before {
+  content: "\E910";
+}
+
+.i-connection:before {
+  content: "\E91B";
+}
+
+.i-users:before {
+  content: "\E972";
+}
+
+.i-contrast:before {
+  content: "\E9D5";
+}
+
+.i-facebook:before {
+  content: "\EA90";
+}
+
+.i-instagram:before {
+  content: "\EA92";
+}
+
+.i-twitter:before {
+  content: "\EA96";
+}
+
+.i-rss:before {
+  content: "\EA9B";
 }
 
 /*!
