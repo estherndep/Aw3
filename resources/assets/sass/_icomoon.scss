@@ -1,0 +1,141 @@
+[class^="i-"], [class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 80px;
+  color: #020b17;
+  position: relative;
+  left: 20%;
+
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-number {
+  &:before {
+    content: $i-number; 
+  }
+}
+.i-number1 {
+  &:before {
+    content: $i-number1; 
+  }
+}
+.i-number2 {
+  &:before {
+    content: $i-number2; 
+  }
+}
+.i-number3 {
+  &:before {
+    content: $i-number3; 
+  }
+}
+.i-number4 {
+  &:before {
+    content: $i-number4; 
+  }
+}
+.i-number5 {
+  &:before {
+    content: $i-number5; 
+  }
+}
+.i-monitor {
+  &:before {
+    content: $i-monitor; 
+  }
+}
+.i-camera {
+  &:before {
+    content: $i-camera; 
+  }
+}
+.i-film {
+  &:before {
+    content: $i-film; 
+  }
+}
+.i-film1 {
+  &:before {
+    content: $i-film1; 
+  }
+}
+.i-radio {
+  &:before {
+    content: $i-radio; 
+  }
+}
+.i-locked {
+  &:before {
+    content: $i-locked; 
+  }
+}
+.i-lamp {
+  &:before {
+    content: $i-lamp; 
+  }
+}
+.i-stats {
+  &:before {
+    content: $i-stats; 
+  }
+}
+.i-profile {
+  &:before {
+    content: $i-profile; 
+  }
+}
+.i-safe {
+  &:before {
+    content: $i-safe; 
+  }
+}
+.i-presentation {
+  &:before {
+    content: $i-presentation; 
+  }
+}
+.i-connection {
+  &:before {
+    content: $i-connection; 
+  }
+}
+.i-users {
+  &:before {
+    content: $i-users; 
+  }
+}
+.i-contrast {
+  &:before {
+    content: $i-contrast; 
+  }
+}
+.i-facebook {
+  &:before {
+    content: $i-facebook; 
+  }
+}
+.i-instagram {
+  &:before {
+    content: $i-instagram; 
+  }
+}
+.i-twitter {
+  &:before {
+    content: $i-twitter; 
+  }
+}
+.i-rss {
+  &:before {
+    content: $i-rss; 
+  }
+}
+
