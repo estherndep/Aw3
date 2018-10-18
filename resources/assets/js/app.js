@@ -4,8 +4,12 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+/*jshint esversion: 6 */ 
+
 require("./bootstrap");
-require("./index");
+
+import "./services";
+import "./index";
 
 console.log('mounted');
 

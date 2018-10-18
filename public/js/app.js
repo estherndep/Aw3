@@ -13677,21 +13677,31 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-module.exports = __webpack_require__(37);
+module.exports = __webpack_require__(36);
 
 
 /***/ }),
 /* 11 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__services__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__index__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+/*jshint esversion: 6 */
+
 __webpack_require__(12);
-__webpack_require__(36);
+
+
+
 
 console.log('mounted');
 
@@ -35914,6 +35924,16 @@ module.exports = function spread(callback) {
 /* 36 */
 /***/ (function(module, exports) {
 
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */
+/***/ (function(module, exports) {
+
 var icon = document.getElementById('icon');
 var drawer = document.getElementById('side-drawer');
 var fullOverlay = document.getElementById('full-overlay');
@@ -35939,10 +35959,35 @@ icon.onclick = function toggleActive() {
 console.log(isActive);
 
 /***/ }),
-/* 37 */
+/* 42 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+
+
+var header = document.getElementById("service-header");
+var btns = document.getElementsByClassName("service-btn");
+var body = document.getElementById("service-body");
+
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function () {
+    var activeBlock = body.getElementsByClassName("active");
+    var current = header.getElementsByClassName("active");
+
+    current[0].className = current[0].className.replace(" active", "");
+    activeBlock[0].className = activeBlock[0].className.replace(" active", "");
+
+    console.log(this.id);
+    if (this.id == "residential-btn") {
+      document.getElementById("residential-block").className += " active";
+    } else if (this.id == "commercial-btn") {
+      document.getElementById("commercial-block").className += " active";
+    } else {
+      document.getElementById("hospitality-block").className += " active";
+    }
+
+    this.className += " active";
+  });
+}
 
 /***/ })
 /******/ ]);
