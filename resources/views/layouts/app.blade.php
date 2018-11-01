@@ -12,36 +12,39 @@
 	</head>
 
 <body>
+
 	<div id="app">
-    <nav>
-		<div class="scl-icons">
-			<i class="fab fa-twitter"></i>
-			<i class="fab fa-instagram"></i>
-			<i class="fab fa-facebook-f"></i>
-		</div>
-		
-        <div id="icon">
-            <div id="burger">
-            </div>
-        </div>
-        <div id = "full-overlay"></div>
-		<div id ="side-drawer">
-			<div class="container">
-				<ul>
-					<div id="main-content">
-						<li><p>01</p><a href="{{route('projects')}}">Projects</a></li>
-						<li><p>02</p><a href="{{route('services')}}">Services</a></li>
+		<header>
+			<nav>
+				<div class="scl-icons">
+					<i class="fab fa-twitter"></i>
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-facebook-f"></i>
+				</div>
+				
+				<div id="icon">
+					<div id="burger">
 					</div>
-					<div id="sub-content">
-						<li><a style="color: darkred">TIS</a></li>
-						<li><a href="{{route('about')}}">About</a></li>
-						<li><a href="{{route('blog.index')}}">Blog</a></li>
-						<li><a href="{{route('contact')}}">Contact us</a></li>
+				</div>
+				<div id = "full-overlay"></div>
+				<div id ="side-drawer">
+					<div class="container">
+						<ul>
+							<div id="main-content">
+								<li><p>01</p><a href="{{route('projects')}}">Projects</a></li>
+								<li><p>02</p><a href="{{route('services')}}">Services</a></li>
+							</div>
+							<div id="sub-content">
+								<li><a style="color: darkred">TIS</a></li>
+								<li><a href="{{route('about')}}">About</a></li>
+								<li><a href="{{route('blog.index')}}">Blog</a></li>
+								<li><a href="{{route('contact')}}">Contact us</a></li>
+							</div>
+						</ul>
 					</div>
-				</ul>
-			</div>
-		</div>
-    </nav>
+				</div>
+			</nav>
+        </header>
 
 	@yield('content')
 	

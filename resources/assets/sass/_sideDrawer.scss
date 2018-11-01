@@ -101,39 +101,37 @@ nav .scl-icons{
   }
 
   p{
+    @include rem(font-size, 13px);
     display: inline-block;
-    font-size:0.65rem;
     color: #fff;
   }
 }
 
-#side-drawer.active {
-  right: 0px;
+#side-drawer{
+  &.active {
+  right: 0px;}
+
+  #main-content {
+    @include rem(font-size, 27px);
+    list-style: none;
+    margin-bottom: 60px;
+    display: block;
+    font-weight: 100;
+  }
+
+  #sub-content {
+    @include rem(font-size, 13px);
+    @include rem(padding-left, 8px);
+    display: block;
+    position: relative;
+    font-weight: 300;
+  }
+  >.container>ul {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+  }
 }
-
-#side-drawer #main-content {
-  list-style: none;
-  margin-bottom: 60px;
-  display: block;
-  font-size: 1.7rem;
-  font-weight: 100;
-}
-
-#side-drawer #sub-content {
-  display: block;
-  position: relative;
-  font-size: 0.8rem;
-  font-weight: 300;
-  padding-left: 0.8rem; 
-}
-
-
-#side-drawer>.container>ul {
-  list-style: none;
-  margin-top: 20px;
-  padding: 0;
-}
-
 
 #full-overlay {
   opacity: 0;

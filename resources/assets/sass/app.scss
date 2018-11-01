@@ -1,5 +1,6 @@
 // Fonts
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i');
 @import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
 
@@ -22,8 +23,18 @@
   font-style: normal;
 }
 
+
+
 // Variables
 @import "variables";
+
+// Mixins
+@import "third-party/rem";
+@import "third-party/breakpoint";
+@import "mixins";
+
+
+@import "elements";
 @import "main";
 @import "contact";
 @import "project";
@@ -36,11 +47,11 @@
 
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
-@mixin transform($property) {
-  -webkit-transform: $property;
-  -ms-transform: $property;
-  transform: $property;
-}
+// @mixin transform($property) {
+//   -webkit-transform: $property;
+//   -ms-transform: $property;
+//   transform: $property;
+// }
 
 .navbar-laravel {
   background-color: #fff;

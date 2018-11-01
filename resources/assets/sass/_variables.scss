@@ -37,3 +37,21 @@ $i-rss: "\ea9b";
 //Colors
 
 $deep-blue: #020b17;
+
+
+//breakpoints
+
+$breakpoints: (
+    'xxs': 320px,
+    'xs': 480px,                // Max width for mobile view port
+    's-1': 767px,
+    's': 768px,
+    'm-31': 959px,
+    'm': 990px,
+    'l': 1024px,                // Max width for tablet view port
+    'xl': 1200px,
+    'ql-inline-1': 1208px,      // one less than ql-inline
+    'ql-inline': 1209px,        // width to start displaying quick links inline
+    'xxl': 1440px,
+    'xxxl' : 1600px
+);

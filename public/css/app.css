@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);@import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);@import url(https://fonts.googleapis.com/css?family=Montserrat:300);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i);@import url(https://use.fontawesome.com/releases/v5.2.0/css/all.css);@import url(https://fonts.googleapis.com/css?family=Montserrat:300);@charset "UTF-8";
 
 @font-face {
   font-family: Hero;
@@ -17,6 +17,20 @@
   src: url("/fonts/icomoon/icomoon.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html body {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+html body h2 {
+  font-size: 39px;
+  font-size: 3.9rem;
 }
 
 * {
@@ -1054,8 +1068,9 @@ nav .scl-icons {
 }
 
 #side-drawer p {
+  font-size: 13px;
+  font-size: 1.3rem;
   display: inline-block;
-  font-size: 0.65rem;
   color: #fff;
 }
 
@@ -1064,19 +1079,22 @@ nav .scl-icons {
 }
 
 #side-drawer #main-content {
+  font-size: 27px;
+  font-size: 2.7rem;
   list-style: none;
   margin-bottom: 60px;
   display: block;
-  font-size: 1.7rem;
   font-weight: 100;
 }
 
 #side-drawer #sub-content {
+  font-size: 13px;
+  font-size: 1.3rem;
+  padding-left: 8px;
+  padding-left: 0.8rem;
   display: block;
   position: relative;
-  font-size: 0.8rem;
   font-weight: 300;
-  padding-left: 0.8rem;
 }
 
 #side-drawer > .container > ul,
@@ -1251,30 +1269,71 @@ nav .scl-icons {
   height: 18vw;
 }
 
+.content #service-head-block {
+  height: 14rem;
+}
+
+.content #service-head-block #featured-service {
+  background-color: white;
+}
+
+.content #service-head-block div #h-featured-service {
+  background-color: white;
+  width: 100%;
+  height: 50%;
+}
+
 .content #service-content {
   margin-top: 12rem;
 }
 
-.content #service-content #service-header span a {
+.content #service-content #service-header .service-btn {
+  display: block;
   position: relative;
-  width: 25%;
+}
+
+@media (min-width: 768px) {
+  .content #service-content #service-header .service-btn {
+    display: inline-block;
+  }
+}
+
+.content #service-content #service-header .service-btn.active a,
+.content #service-content #service-header .service-btn:hover a {
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  -webkit-transition: transform 0.3s cubic-bezier(0.6, 0.3, 0.11, 0.86);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.6, 0.3, 0.11, 0.86);
+  transition: -webkit-transform 0.3s cubic-bezier(0.6, 0.3, 0.11, 0.86);
+  transition: transform 0.3s cubic-bezier(0.6, 0.3, 0.11, 0.86);
+  transition: transform 0.3s cubic-bezier(0.6, 0.3, 0.11, 0.86), -webkit-transform 0.3s cubic-bezier(0.6, 0.3, 0.11, 0.86);
+}
+
+.content #service-content #service-header .service-btn a {
+  position: relative;
+  display: block;
   cursor: pointer;
 }
 
-.content #service-content #service-header span a::after {
+.content #service-content #service-header .service-btn::after {
   content: "";
   position: absolute;
-  top: 1.5rem;
+  top: 0;
   left: 0;
-  height: 2px;
-  width: 0%;
-  background-color: #020b17;
+  height: 100%;
+  width: 2px;
+  background-color: white;
 }
 
-.content #service-content #service-header span a.active::after {
-  width: 80%;
-  -webkit-transition: ease .3s;
-  transition: ease .3s;
+.content #service-content #service-header .service-btn.active::after,
+.content #service-content #service-header .service-btn:hover::after {
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
+  -webkit-transition: transform 0.3s cubic-bezier(0, 0, 0.08, 0.96);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 0, 0.08, 0.96);
+  transition: -webkit-transform 0.3s cubic-bezier(0, 0, 0.08, 0.96);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.08, 0.96);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.08, 0.96), -webkit-transform 0.3s cubic-bezier(0, 0, 0.08, 0.96);
 }
 
 .content #service-content #service-body {
@@ -1290,47 +1349,34 @@ nav .scl-icons {
 }
 
 .content #service-content #service-body .service-block .sngl-service {
-  height: 15rem;
-  padding: 2rem !important;
-  display: inline-block;
-}
-
-.content #service-content #service-body .service-block .sngl-service .sngl-inner {
-  width: 100%;
-  height: 100%;
-  border: solid 0.2rem #020b17;
-  position: relative;
-}
-
-.content #service-content #service-body .service-block .sngl-service .sngl-inner .sngl-icon {
-  height: 80px;
-  position: absolute;
   background-color: white;
-  right: 40px;
-  top: -40px;
+  display: inline-block;
+  margin: 4.8% 0;
+  padding-bottom: 40%;
+  width: 100%;
 }
 
-@media (max-width: 992px) {
-  #service-content .sngl-service {
-    height: 36vw;
+@media (min-width: 768px) {
+  .content #service-content #service-body .service-block .sngl-service {
+    margin: 4.8%;
+    padding-bottom: 40%;
+    width: 40%;
   }
 }
 
-@media (max-width: 767px) {
-  #service-content {
-    margin-top: 10rem;
+@media (min-width: 1024px) {
+  .content #service-content #service-body .service-block .sngl-service {
+    margin: 3.15%;
+    padding-bottom: 26.66%;
+    width: 26.66%;
   }
+}
 
-  #service-content .sngl-service {
-    height: 80vw;
-  }
-
-  #main .sngl-img {
-    height: 30vw;
-  }
-
-  #main #img-row {
-    bottom: 30vw;
+@media (min-width: 1200px) {
+  .content #service-content #service-body .service-block .sngl-service {
+    margin: 2.3%;
+    padding-bottom: 20%;
+    width: 20%;
   }
 }
 
@@ -2101,8 +2147,8 @@ pre code {
 .col-1,
 .col-2,
 .col-3,
+.content #service-content #service-header .service-btn,
 .col-4,
-.content #service-content #service-body .service-block .sngl-service .sngl-inner .sngl-icon,
 .col-5,
 .featured-blog,
 .col-6,
@@ -2113,6 +2159,7 @@ pre code {
 .col-10,
 #pop-block a,
 .content #main #img-row,
+.content #service-head-block,
 .col-11,
 .col-12,
 #smry #smry-img,
@@ -2139,7 +2186,6 @@ pre code {
 .col-md-4,
 .col-md-5,
 .col-md-6,
-.content #service-content #service-body .service-block .sngl-service,
 .col-md-7,
 .col-md-8,
 .col-md-9,
@@ -2152,10 +2198,12 @@ pre code {
 .col-lg-2,
 .col-lg-3,
 .col-lg-4,
+.content #service-head-block div,
 .col-lg-5,
 .col-lg-6,
 .col-lg-7,
 .col-lg-8,
+.content #service-head-block #featured-service,
 .col-lg-9,
 .col-lg-10,
 .col-lg-11,
@@ -2214,15 +2262,15 @@ pre code {
   max-width: 16.66666667%;
 }
 
-.col-3 {
+.col-3,
+.content #service-content #service-header .service-btn {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 25%;
           flex: 0 0 25%;
   max-width: 25%;
 }
 
-.col-4,
-.content #service-content #service-body .service-block .sngl-service .sngl-inner .sngl-icon {
+.col-4 {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 33.33333333%;
           flex: 0 0 33.33333333%;
@@ -2268,7 +2316,8 @@ pre code {
 
 .col-10,
 #pop-block a,
-.content #main #img-row {
+.content #main #img-row,
+.content #service-head-block {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 83.33333333%;
           flex: 0 0 83.33333333%;
@@ -2722,8 +2771,7 @@ pre code {
   }
 
   .col-md-6,
-  #pop-block a,
-  .content #service-content #service-body .service-block .sngl-service {
+  #pop-block a {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
@@ -2952,7 +3000,7 @@ pre code {
   }
 
   .col-lg-4,
-  .content #service-content #service-body .service-block .sngl-service {
+  .content #service-head-block div {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 33.33333333%;
             flex: 0 0 33.33333333%;
@@ -2980,7 +3028,8 @@ pre code {
     max-width: 58.33333333%;
   }
 
-  .col-lg-8 {
+  .col-lg-8,
+  .content #service-head-block #featured-service {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 66.66666667%;
             flex: 0 0 66.66666667%;

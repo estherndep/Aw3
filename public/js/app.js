@@ -13677,7 +13677,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-module.exports = __webpack_require__(36);
+module.exports = __webpack_require__(38);
 
 
 /***/ }),
@@ -13686,9 +13686,9 @@ module.exports = __webpack_require__(36);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__services__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__index__);
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -35924,14 +35924,35 @@ module.exports = function spread(callback) {
 /* 36 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+
+
+var header = document.getElementById("service-header");
+var btns = document.getElementsByClassName("service-btn");
+var body = document.getElementById("service-body");
+
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function () {
+    var activeBlock = body.getElementsByClassName("active");
+    var current = header.getElementsByClassName("active");
+
+    current[0].className = current[0].className.replace(" active", "");
+    activeBlock[0].className = activeBlock[0].className.replace(" active", "");
+
+    console.log(this.id);
+    if (this.id == "residential-btn") {
+      document.getElementById("residential-block").className += " active";
+    } else if (this.id == "commercial-btn") {
+      document.getElementById("commercial-block").className += " active";
+    } else {
+      document.getElementById("hospitality-block").className += " active";
+    }
+
+    this.className += " active";
+  });
+}
 
 /***/ }),
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */
+/* 37 */
 /***/ (function(module, exports) {
 
 var icon = document.getElementById('icon');
@@ -35959,35 +35980,10 @@ icon.onclick = function toggleActive() {
 console.log(isActive);
 
 /***/ }),
-/* 42 */
+/* 38 */
 /***/ (function(module, exports) {
 
-
-
-var header = document.getElementById("service-header");
-var btns = document.getElementsByClassName("service-btn");
-var body = document.getElementById("service-body");
-
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function () {
-    var activeBlock = body.getElementsByClassName("active");
-    var current = header.getElementsByClassName("active");
-
-    current[0].className = current[0].className.replace(" active", "");
-    activeBlock[0].className = activeBlock[0].className.replace(" active", "");
-
-    console.log(this.id);
-    if (this.id == "residential-btn") {
-      document.getElementById("residential-block").className += " active";
-    } else if (this.id == "commercial-btn") {
-      document.getElementById("commercial-block").className += " active";
-    } else {
-      document.getElementById("hospitality-block").className += " active";
-    }
-
-    this.className += " active";
-  });
-}
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
