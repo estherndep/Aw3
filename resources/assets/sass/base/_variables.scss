@@ -1,0 +1,71 @@
+
+// Body
+$body-bg: #f5f8fa;
+
+// Typography
+$font-family-sans-serif: "", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+
+//icomoon
+$i-number: "\e900";
+$i-number1: "\e901";
+$i-number2: "\e902";
+$i-number3: "\e903";
+$i-number4: "\e904";
+$i-number5: "\e905";
+$i-monitor: "\e906";
+$i-camera: "\e907";
+$i-film: "\e908";
+$i-film1: "\e909";
+$i-radio: "\e90a";
+$i-locked: "\e90b";
+$i-lamp: "\e90c";
+$i-stats: "\e90d";
+$i-profile: "\e90e";
+$i-safe: "\e90f";
+$i-presentation: "\e910";
+$i-connection: "\e91b";
+$i-users: "\e972";
+$i-contrast: "\e9d5";
+$i-facebook: "\ea90";
+$i-instagram: "\ea92";
+$i-twitter: "\ea96";
+$i-rss: "\ea9b";
+
+//Colors
+
+$deep-blue: #020b17;
+$pastel-blue: #d7dee1;
+$cadet-blue: #45a29e;
+
+//breakpoints
+
+$breakpoints: (
+    'xxs': 320px,
+    'xs': 480px,                // Max width for mobile view port
+    's-1': 767px,
+    's': 768px,
+    'm-31': 959px,
+    'm': 990px,
+    'l': 1024px,                // Max width for tablet view port
+    'xl': 1200px,
+    'ql-inline-1': 1208px,      // one less than ql-inline
+    'ql-inline': 1209px,        // width to start displaying quick links inline
+    'xxl': 1440px,
+    'xxxl' : 1600px,
+    'xxxxl' : 1920px
+);
+
+//typography
+
+$typography: (
+    'base-font-size': 16px,
+    'heading-one': 40px,
+    'heading-two': 30px,
+    'heading-three': 30px,
+    'heading-four': 21px,
+    'heading-five': 15px,
+    'heading-six': 13px
+);

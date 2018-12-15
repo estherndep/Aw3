@@ -1,0 +1,57 @@
+.post-catalog-body{
+  margin-top: 5rem;
+
+  a{
+      cursor: pointer; 
+  }
+      .sngl-post {
+          display: inline-block;
+          margin: 10% 0;
+          width: 100%;
+          
+          @include breakpoint('s') {
+              margin: 4.8%;
+              width: 40%; 
+          };
+
+          @include breakpoint('xl') {
+              margin: 1.5%;
+              width: 30%; 
+          };
+
+          .sngl-post-img {
+              background-color: gray;
+              width: 100%;
+              padding-bottom: 50%;
+
+              @include breakpoint('s'){
+                  padding-bottom: 80% 
+              }                        
+          }
+
+          .sngl-post-title {
+              @include rem('padding', 20px 0);
+          }
+
+          .more-txt {
+              display: inline-block;
+              position: relative;
+              &:hover {
+                  &::after {
+                      width: 30px;
+                  }
+              }
+
+              &::after {
+                  content: "";
+                  position: absolute;
+                  top: 50%;
+                  left: 110%;
+                  height: 1px;
+                  width: 0;
+                  background-color: #020b17;
+                  @include transition(width .3s);
+              }
+          }
+      }
+}

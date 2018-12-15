@@ -1,27 +1,33 @@
 var icon = document.getElementById('icon');
-var drawer = document.getElementById('side-drawer');
-var fullOverlay = document.getElementById('full-overlay');
-var element = document.getElementById('app');
-var isActive = false;
+var topNav = document.getElementById('top-nav');
 
-icon.onclick = 
-function toggleActive(){
-    if (!isActive) {
-        icon.classList.add('active');   
-        fullOverlay.classList.add('active');
-        drawer.classList.add('active'); 
-        element.classList.add('no-scroll'); 
-        isActive = true;
+
+
+$('#icon').on('click', function() {
+    $('.overlay.full').toggleClass('active');
+    $(this).toggleClass('active');
+
+    $('#top-nav').toggleClass('side-drawer');
+    $('body').toggleClass('no-scroll');
+});
+
+$(window).on('resize', function(){
+    if(window.innerWidth > 990 && topNav.className != 'nav-block'){
+        icon.click();
     }
-    else{
-        icon.classList.remove('active');
-        fullOverlay.classList.remove('active'); 
-        drawer.classList.remove('active'); 
-        element.classList.remove('no-scroll'); 
-        isActive = false;
-    }
-    
-};
+ });
 
 
-console.log(isActive);
+$('.accordian-title').on('click', function(){
+        $(this).toggleClass('active');
+        $(this).find('.tab-icon').toggleClass('active');
+        
+        var content = $(this).next();
+        
+        if(content.css('max-height') == '0px'){
+            content.css('max-height', 'none');
+        }
+        else{
+             content.css('max-height', '0px'); 
+         }
+});

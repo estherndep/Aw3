@@ -1,0 +1,249 @@
+.content{
+    // #main {
+    //     #img-row {
+    //         @extend .container,
+    //         .col-10,
+    //         .m-auto,
+    //         .position-relative;
+    //         bottom: 9vw;
+    //         z-index: 8;
+    //     }
+    //     .sngl-img {
+    //         @extend .col-6,
+    //         .col-md-3;
+    //         height: 18vw;
+    //     }
+    // }
+    #service-head-block{
+        color: white;
+        height:100vh;
+        width: 100%;
+
+        .content-block{
+            padding: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+    }
+
+    .service-content {
+        margin-top: 12rem;
+
+        #service-header {
+            margin: 0 auto 10rem auto;
+            width: 55%;
+
+            .service-link {
+                @include rem(padding, 0 15px);
+                display: block;
+                position: relative;
+
+                @include breakpoint('s'){
+                    display: inline-block;
+                    width: 32.5%;
+                }
+
+                &.active a, &:hover a{
+                    @include transform(translateX(10px));
+                    @include transition(transform .3s cubic-bezier(.6,.3,.11,.86));
+                }
+
+                a {
+                    position: relative;
+                    display: block;
+                    cursor: pointer; 
+                    font-weight: 700;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 2px;
+                    background-color: $deep-blue;
+                    
+                }
+
+                &.active::after, &:hover::after {
+                    @include transform(rotate(40deg));
+                    @include transition(transform .3s cubic-bezier(0,0,.08,.96));
+                }
+
+            }
+        }
+
+        .post-catalog-body{
+            margin: auto;
+            width: 60%;
+        }
+        .service-block{
+            display: none;
+            height: 64vh;
+
+            &.active{
+                display: block;
+            }
+
+            &.owl-theme{
+                .owl-stage-outer{
+                    height: 100%;
+                }
+                .sngl-post{
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    display: block;
+                    margin: auto;
+                    width: 80%;
+
+                    .sngl-post-title{
+                        @include rem(height, 120px);
+                        @include rem(padding, 20px);
+                        @include transition(height .3s cubic-bezier(.6,.3,.11,.86));
+
+                        &.active{
+                            @include rem(height, 180px); 
+                            @include breakpoint('xxxl'){
+                                @include rem(height, 220px);  
+                            }
+                        }
+                    }
+
+                    &::before{
+                        @include rem(width, 16px);
+                        content: "";
+                        height: 200%;
+                        left: 50%;
+                        position: absolute;
+                        top: 100%;
+                        transform: translateX(-50%);
+                        background: #ced0d2;
+                    }
+                }
+
+                .owl-item{
+                    @include rem(margin-bottom, 200px);
+                }
+
+                .owl-nav{
+                    width: 100%;
+
+                    .owl-prev, .owl-next{
+                        @include rem(padding, 7px !important);
+                        color: $deep-blue;
+                        position: absolute;
+                        top: 30%;
+
+                        i{
+                            @include rem(font-size, 27px);
+                            vertical-align: middle;
+
+                            @include breakpoint('xxxl'){
+                                @include rem(font-size, 70px !important);
+                            }
+                        }
+                    }
+                    .owl-next{
+                        @include rem(margin-right, -50px);
+                        right: 0;
+                    }
+
+                    .owl-prev{
+                        @include rem(margin-left, -50px);
+                    }
+                }
+
+                .owl-dots{
+                    display: none;
+                }
+            }
+        }
+        .content-block{
+            background-color: #f5f6f6;
+            height: 100vh;
+            padding: 20vh 0;
+
+            &::before{
+                @include rem(width, 16px);
+                content: "";
+                height: 100%;
+                left: 30%;
+                position: absolute;
+                top: 0;
+                background: #ced0d2;
+            }
+            &::after{
+                @include rem(height, 16px);
+                content: "";
+                width: 100%;
+                left: 50%;
+                position: absolute;
+                top: 0;
+                transform: translateX(-50%);
+                background: #ced0d2;
+            }
+            
+            .service-detail{
+                height: 100%;
+                width: 80%;
+                margin: auto;
+
+                .img-block{
+                    @extend .col-12, .col-md-8;
+                    background: cadetblue;
+                }  
+
+                .description-block{
+                    @extend .col-12, .col-md-4;
+                    background-color: white;
+                    margin:0;
+                }
+            }
+        }
+    }
+
+    .contact-link-block{
+        @include rem(padding, 40px 0);
+        position: relative;
+
+        @include breakpoint('s'){
+            @include rem(padding, 60px 0);
+        }
+
+        &::before{
+            @include rem(width, 16px);
+            @include rem(height, 100px);
+            content: "";
+            left: 30%;
+            position: absolute;
+            top: 0;
+            background: #ced0d2;
+
+            @include breakpoint('s'){
+                @include rem(height, 120px);
+            }
+
+        }
+
+        .box-link{
+            @include rem(padding, 30px);
+            @include rem(margin, 60px auto);
+            @include rem(max-width, 780px);
+            display: block;
+            width: 90%;
+
+            @include breakpoint('xxxl'){
+                @include rem(max-width, 1200px); 
+            }
+
+            h3{
+                color: $cadet-blue;
+            }
+
+            h6{
+                @include rem(font-size, 20px);
+            }
+        }
+    }
+}

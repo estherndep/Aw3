@@ -1,29 +1,51 @@
-
-
-
 var header = document.getElementById("service-header");
-var btns = document.getElementsByClassName("service-btn");
+var links = document.getElementsByClassName("service-link");
 var body = document.getElementById("service-body");
+var blocks = document.getElementsByClassName("service-block");
 
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var activeBlock = body.getElementsByClassName("active");
-    var current = header.getElementsByClassName("active")
-    
-    current[0].className = current[0].className.replace(" active", "");
-    activeBlock[0].className = activeBlock[0].className.replace(" active", "");
+$('.service-link').on('click', function(){
+  var block = $(this).data('block');
+  
+  if($('.service-link').is('.active')){
+    $('.service-link').removeClass('active');
+  }
+  if($('.service-block').is('.active')){
+    $('.service-block').removeClass('active');
+  }
 
-    console.log(this.id);
-    if(this.id == "residential-btn"){
-      document.getElementById("residential-block").className += " active";
-    }
-    else if(this.id == "commercial-btn"){
-      document.getElementById("commercial-block").className += " active";
-    }
-    else{
-      document.getElementById("hospitality-block").className += " active";
-    }
+  $(this).toggleClass('active');
+  $('#'+block).toggleClass('active');
+});
 
-    this.className += " active";
-  });
-}
+$('.sngl-post').on('click', function(){
+  if( $('.sngl-post').children('.sngl-post-title').is('.active')){
+    $('.sngl-post').children('.sngl-post-title').removeClass('active');
+  }
+
+  $(this).children('.sngl-post-title').toggleClass('active');
+})
+
+$('.sngl-post').children('.sngl-post-title').first().addClass('active');
+$('#default-open').click();
+
+$('.service-block').owlCarousel({
+  loop:true,
+  margin:10,
+  nav:true,
+  navText: ['<i class="material-icons">chevron_left</i>', '<i class="material-icons">chevron_right</i>'],
+  navClass: ['owl-prev', 'owl-next'],
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:2
+      },
+      1024:{
+        items:3
+      },
+      1440:{
+          items:4
+      }
+  }
+})

@@ -1,0 +1,162 @@
+html { 
+  font-size: 62.5%; 
+  
+  body{
+      @include rem(font-size, map-get($typography, 'base-font-size'));
+      background-color: white;
+      font-family: 'Roboto Condensed', sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative;
+
+      @include breakpoint('xxxl') {
+        @include rem(font-size, map-get($typography, 'base-font-size') + 10px);
+    }
+
+      @include breakpoint('xxxxl') {
+        @include rem(font-size, map-get($typography, 'base-font-size') + 20px);
+    }
+
+      &.no-scroll{
+          overflow: hidden;
+      }
+
+        h1,h2,h3,h4,h5{
+            @include rem(margin-bottom, 1.5rem);
+        font-weight: 700;
+
+        &.title{
+            text-transform: uppercase;
+        }
+
+        a{
+            text-transform: uppercase;
+        }
+        }
+
+        h1 {
+        @include rem(font-size, map-get($typography, 'heading-one'));
+
+        @include breakpoint('l') {
+            @include rem(font-size, (map-get($typography, 'heading-one') + 5px));
+        }
+
+        @include breakpoint('xxl') {
+            @include rem(font-size, (map-get($typography, 'heading-two') + 15px));
+        }
+
+        @include breakpoint('xxxl') {
+            @include rem(font-size, (map-get($typography, 'heading-two') + 25px));
+        }
+
+        @include breakpoint('xxxxl') {
+            @include rem(font-size, (map-get($typography, 'heading-two') + 40px));
+        }
+        }
+    
+        h2 {
+            @include rem(font-size, map-get($typography, 'heading-two'));
+        
+            @include breakpoint('l') {
+                @include rem(font-size, (map-get($typography, 'heading-two') + 10px));
+            }
+
+            @include breakpoint('xxl') {
+                @include rem(font-size, (map-get($typography, 'heading-two') + 20px));
+            }
+
+            @include breakpoint('xxxl') {
+                @include rem(font-size, (map-get($typography, 'heading-two') + 30px));
+            }
+
+            @include breakpoint('xxxxl') {
+                @include rem(font-size, (map-get($typography, 'heading-two') + 45px));
+            }
+        }
+        
+        h3 {
+            @include rem(font-size, map-get($typography, 'heading-three'));
+        
+            @include breakpoint('l') {
+                @include rem(font-size, (map-get($typography, 'heading-three') + 2px));
+            }
+            @include breakpoint('l') {
+                @include rem(font-size, (map-get($typography, 'heading-two') + 10px));
+            }
+
+            @include breakpoint('xxl') {
+                @include rem(font-size, (map-get($typography, 'heading-two') + 20px));
+            }
+
+            @include breakpoint('xxxl') {
+                @include rem(font-size, (map-get($typography, 'heading-two') + 30px));
+            }
+
+            @include breakpoint('xxxxl') {
+                @include rem(font-size, (map-get($typography, 'heading-two') + 45px));
+            }
+        }
+        
+        h4 {
+            @include rem(font-size, map-get($typography, 'heading-four'));
+        
+            @include breakpoint('l') {
+                @include rem(font-size, (map-get($typography, 'heading-two') + 5px));
+            }
+
+            @include breakpoint('xxl') {
+                @include rem(font-size, (map-get($typography, 'heading-two') + 10px));
+            }
+
+            @include breakpoint('xxxl') {
+                @include rem(font-size, (map-get($typography, 'heading-two') + 20px));
+            }
+
+            @include breakpoint('xxxxl') {
+                @include rem(font-size, (map-get($typography, 'heading-two') + 35px));
+            }
+        }
+        
+        h5 {
+            @include rem(font-size, map-get($typography, 'heading-five'));
+
+            @include breakpoint('l') {
+                @include rem(font-size, (map-get($typography, 'heading-five') + 5px));
+            }
+
+            @include breakpoint('xxl') {
+                @include rem(font-size, (map-get($typography, 'heading-five') + 10px));
+            }
+
+            @include breakpoint('xxxl') {
+                @include rem(font-size, (map-get($typography, 'heading-five') + 20px));
+            }
+
+            @include breakpoint('xxxxl') {
+                @include rem(font-size, (map-get($typography, 'heading-five') + 35px));
+            }
+        }
+        
+        h6 {
+            @include rem(font-size, map-get($typography, 'heading-six'));
+            @include breakpoint('l') {
+                @include rem(font-size, (map-get($typography, 'heading-six') + 3px));
+            }
+
+            @include breakpoint('xxl') {
+                @include rem(font-size, (map-get($typography, 'heading-six') + 7px));
+            }
+
+            @include breakpoint('xxxl') {
+                @include rem(font-size, (map-get($typography, 'heading-six') + 17px));
+            }
+
+            @include breakpoint('xxxxl') {
+                @include rem(font-size, (map-get($typography, 'heading-six') + 27px));
+            }
+            font-weight: 300;
+            font-style: italic;
+            text-transform: capitalize;;
+        }
+  }
+}

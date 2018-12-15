@@ -2,47 +2,60 @@
 @section('title'){{$title}}@endsection
 @section('content')
     <div class="content">
-        <div id="design"></div>
-        <section id= "main">
-            
-            <div class=" col-10 col-offset-1 col-md-8 col-xl-6 inverse" id= "feature" >
-                <div id="feature-img" style="background-image: url(/img/feat-img.jpg);"></div>
-                <div class = "overlay"></div>
-                <div class= "intro-block col-5 col-md-3" id="projects">
-                    <a href="{{route('projects')}}">PROJECTS</a>
+        <div class="design"></div>
+        <section id= "content-head">
+            <div class="page-intro"> 
+                    <div class="site-intro-text">
+                    </div>
+                <div class="slider-svg">
+                    <div class="intro-text">
+                        <h2>AWTO.<br>MEITTED.<br>LIVING.</h2>
+                    </div>
+                    <img src="img/home/slider.svg" alt="">
                 </div>
-                <div class= "intro-block col-5 col-md-3" id="services">
-                    <a href="{{route('services')}}">SERVICES</a>
+                <div id="head-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                    </ul>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" style="background-image: url('img/home/home-slider1.jpeg');"></div>
+                        <div class="carousel-item" style="background-image: url('img/home/home-slider2.jpeg');"></div>
+                        <div class="carousel-item" style="background-image: url('img/home/home-slider3.jpeg');"></div>
+                        <div class="carousel-item" style="background-image: url('img/home/home-slider4.jpeg');"></div>
+                    </div>  
                 </div>
             </div>
         </section>
 
-
-        <section class="col-10 col-md-11 ml-auto mr-auto" id="about-block">
-            <div class="row" >
-                <div class="col-12 col-md-5" id="about-content">
-                    <span class="sum">-ABOUT US-</span>
-                    <h3>
-                        WE ENHANCE<br>YOUR WORLD
-                    </h3>
-                    <p> 
-                        Lorem ipsum dolor sit amet,
-                        facilisis ligula sit justo.Eget tortor ut suspendisse dui pede, 
-                        pellentesque auctor ut tellus, porttitor magnis morbi vel accumsan
-                        ligula lacus.
-                    </p>
-                    <div class = "box-link text-center"><a href="{{route('about')}}">KNOW MORE</a></div>
-                </div>
-
-
-                <div class="col-12 col-md-7" id="about-image">
-                    <div class="block-img"style="background-image: url(/img/abt-block.jpg);">
-                        <div class="tp-corner"></div>
-                        <div class="btm-corner"></div>
+        <section class="content-block" id="about-block">
+            <div class="block-quote">
+                <h2> 
+                    Lorem ipsum dolor sit amet,
+                    facilisis ligula sit justo.Eget tortor ut suspendisse dui pede.
+                </h2>
+            </div>
+            <div class="inner row">
+                 <div class="" id="about-image">
+                    <div class="block-img" style="background-image: url(/img/home/about-block.jpeg);">
                         <div class="overlay"></div>
                     </div>
-                    
-
+                </div>
+                <div class="" id="about-content">
+                    <div class="text-holder-table">
+                        <div class="text-holder-cell">
+                            <p> 
+                                Awtomeiddia provides innovative smart home automation products and services to individuals and coorporations alike. 
+                                Our solutions range from security and access control in large organisations to the lighting and comfort of our individual clients.
+                            </p>
+                            <div class="button-holder">
+                                <div class = "box-link text-center"><a href="{{route('about')}}">KNOW MORE</a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -50,128 +63,88 @@
 
 
 	    <section class = "col-12 inverse" id="services-block">
-            <div class="row">
-                <a href="{{route('services')}}" class="service-slide-block col-md-4">
-                    <img src="{{asset('/img/com-slim.jpg')}}" alt="commercial" class="slim">
-                    <div class="overlay">
-                        <div class="caption">
-                            <h4>Commercial</h4>
-                            <p>Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Curabitur pretium risus in turpis eleifend, 
-                            in suscipit neque porta.</p>
-                        </div>
-                    </div>     
-                </a>
-                <a href="{{route('services')}}" class="service-slide-block col-md-4">
-                    <img src="{{asset('/img/res-slim.jpg')}}" alt="residential" class="slim">
-                    <div class="overlay">
-                        <div class="caption">
-                            <h4>Residential</h4>
-                            <p>Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Curabitur pretium risus in turpis eleifend, 
-                            in suscipit neque porta.</p>
-                        </div>
-                    </div>  
-                </a>
-                <a href="{{route('services')}}" class="service-slide-block col-md-4">
-                        <img src="{{asset('/img/hos-slim.jpg')}}" alt="hospitality">
-                        <div class="overlay">
-                            <div class="caption">
-                                <h4>Hospitality</h4>
-                                <p>Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit. Curabitur pretium risus in turpis eleifend, 
-                                in suscipit neque porta.</p>
-                            </div>
-                        </div>
-                </a>
-            </div> 
+           <div class="img-block_container">
+               <div class="accordian-holder">
+                   @foreach($categories as $category)
+                   <h4 class="accordian-title title">
+                       <span class="accordian-width-block">
+                           <span class="tab-title">{{$category->title}}</span>
+                           <span class="tab-icon lnr lnr-cross"></span>
+                       </span>
+                   </h4>
+                   <div class= "accordian-content">
+                       <div class="accordian-content-inner accordian-width-block">
+                           <div class="row">
+                               <div class="col-sm-8">
+                                   <div class="column-inner">
+                                       <div class="column-text-title">{{$category->title}}</div>
+                                       <div class="column-text-content">{{$category->description}}</div>
+                                   </div>
+                               </div>
+                               <div class="col-sm-4">
+                               <div class="column-inner">
+                                   <div class="image-wrapper">
+                                       <img class="single-image" src="/img/home/residential-service.jpeg" alt="">
+                                   </div>
+                               </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   @endforeach
+               </div>
+           </div>
         </section> 
 
-       <div id="services-carousel" class="carousel" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <a href="{{route('services')}}">
-                    <img src="{{asset('/img/com-c.jpg')}}" alt="Commercial services" class="d-block w-100" >
-                    <div class="overlay">
-                        <div class="caption">
-                            <h4>Commercial</h4>
-                            <p>Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit. Curabitur pretium risus in turpis eleifend, 
-                                in suscipit neque porta.
-                            </p>
-                        </div>
-                    </div> 
-                    </a>
+      
+        <section class="content-block container" id="projects-block">
+            <div class= "block-title centre">
+                <span class="sum" style="left:0;">-Projects-</span>
+                <h4>FEATURED PROJECT</h4>
+            </div>
+            <div class="inner row two-column">
+                <div>
+                    <div class="block-img" style="background-image: url('img/home/home-slider2.jpeg');"></div>
                 </div>
-                <div class="carousel-item">
-                    <a href="{{route('services')}}">
-                    <img src="{{asset('/img/res-c.jpg')}}" alt="Residential services" class="d-block w-100" >   
-                    <div class="overlay">
-                        <div class="caption">
-                            <h4>Residential</h4>
-                            <p>Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit. Curabitur pretium risus in turpis eleifend, 
-                                in suscipit neque porta.
-                            </p>
+                
+                <div class="text-image-block">
+                    <div class="text-holder-cell">
+                        <p> 
+                            Lorem ipsum dolor sit amet,
+                            facilisis ligula sit justo.Eget tortor ut suspendisse dui pede, 
+                            pellentesque auctor ut tellus, porttitor magnis morbi vel accumsan
+                            ligula lacus.
+                        </p>
+                        <div class="button-holder">
+                            <div class = "box-link text-center"><a href="{{route('about')}}">KNOW MORE</a></div>
                         </div>
-                    </div> 
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="">
-                    <img class="d-block w-100" src="{{asset('/img/hos-c.jpg')}}" alt="Hospitality">
-                    <div class="overlay">
-                    <div class="caption">
-                        <h4>Hospitality</h4>
-                        <p>Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Curabitur pretium risus in turpis eleifend, 
-                            in suscipit neque porta.
-                        </p> 
                     </div>
-                        
-                    </div> 
-                    </a>
+                    <div class="block-img" style="background-image: url('img/home/home-slider2.jpeg');"></div>
                 </div>
             </div>
-        
         </div>
-        <!-- <div id="prjcts-block" class="col-10 col-md-11 ml-auto mr-auto">
-            <div class="row prjects-content col-6">
-                <div class="p-img col-12" style="background-image: url(/img/abt-block.jpg);">
-                    <div class="btm-corner"></div>
-                    <div class="overlay"></div>
-                </div>
-                <div class="p-img col 12" style="background-image: url(/img/abt-block.jpg);"></div>
-            </div>
-            <div class="row prjects-content col-6">
-                <div class="p-img" style="background-image: url(/img/abt-block.jpg);"></div>
-                <div class="p-img"style="background-image: url(/img/abt-block.jpg);">
-                    <div class="btm-corner"></div>
-                    <div class="overlay"></div>
-                </div>
-            </div>
-        </div> -->
         
-        <section id="tis-block" class="inverse">
-            <div class="tis-content row col-10 col-md-11 ml-auto mr-auto">
-                <div class="col-12 col-md-5 " id="tis-content">
-                    <span class="sum">-OUR PARTNER-</span>
-                    <h3>
-                        TIS TECH
-                    </h3>
+        <section class="content-block inverse" id="tis-block" >
+            <div class="text-holder-table" id="tis-content">
+                <div class="text-holder-cell">
+                    <div class="title-holder">
+                        <span class="sum">-OUR PARTNER-</span>
+                        <h3>
+                            TIS TECH
+                        </h3>
+                    </div>
                     <p> 
                     Partners in Offering the best home automation experience
                     with the best Price.
                     </p>
-                    <div class = "box-link text-center"><a href="{{route('tis')}}">KNOW MORE</a></div>
+                    <div class="button-holder">
+                        <div class = "box-link text-center">
+                            <a href="{{route('tis')}}">KNOW MORE</a>
+                        </div>
+                    </div>
                 </div>
             </div>  
-            <div id="tis-carousel" class="carousel slide row" data-ride="carousel" data-interval="5000">
+            <div id="tis-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
                 
                 <div class="carousel-inner w-100" role="listbox">
                     <div id="ld-br"></div>
@@ -198,28 +171,41 @@
        
 
 
-        <section id= "blog-block">
-            <div class= "col-12">
+        <section class="content-block" id="blog-block">
+            <div class= "block-title">
                 <span class="sum" style="left:0;">-BLOG-</span>
                 <h3>TAKE A LOOK AT OUR POSTS</h3>
-            </div>			
-            <div class="container-fluid wrapper row">
-                <div class="featured-blog">				
-                </div>
+            </div>	
+            <div class="post-catalog-body">
+                <div class="inner row">
+                    <div class="sngl-post">	
+                        <div class="sngl-post-img block-img">
+                            <div class="block-img-title"></div>
+                        </div>
+                    </div>
+                    <div class="sngl-post">	
+                        <div class="sngl-post-img block-img">
+                            <div class="block-img-title"></div>
+                        </div>
+                    </div>
 
-                <div class="featured-blog">				
+                    <div class="sngl-post">	
+                        <div class="sngl-post-img block-img">
+                            <div class="block-img-title"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="sngl-post">	
+                        <div class="sngl-post-img block-img">
+                            <div class="block-img-title"></div>
+                        </div>
+                    </div>
+                    
                 </div>
-
-                <div class="featured-blog ">
-                        
-                </div>
-                
-                <div class="featured-blog ">
-                        
-                </div>
-                
             </div>
-		    <div class = "box-link text-center m-auto"><a href="{{route('blog.index')}}">SHOW MORE</a></div>
+            <div class="button-holder">
+                <div class = "box-link"><a href="{{route('blog.index')}}">SHOW MORE</a></div>
+            </div>		
 	
         </section>
 
@@ -245,7 +231,9 @@
                 <h6>61 Selly Hill, Selly Oak<br> Lagos, 105102 </h6>
                </div>
            </div>
-		   <div class = "box-link text-center m-auto"><a href="{{route('contact')}}">CONTACT PAGE</a></div>
+           <div class="button-holder">
+                <div class = "box-link"><a href="{{route('contact')}}">CONTACT PAGE</a></div>
+           </div>
         </section>
     </div>
 

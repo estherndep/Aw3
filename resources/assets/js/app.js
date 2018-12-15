@@ -6,10 +6,21 @@
 
 /*jshint esversion: 6 */ 
 
-require("./bootstrap");
+import "bootstrap";
 
-import "./services";
+import 'owl.carousel';
+
+
+// Import jQuery ui
+import 'jquery-ui';
+
+//custom js
 import "./index";
+import "./services";
+
+//third-party
+
+
 
 console.log('mounted');
 

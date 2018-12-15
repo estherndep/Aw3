@@ -15,10 +15,13 @@ class CreateServicesTable extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->mediumText('description');
-            $table->string('image');
-            $table->timestamps();
+            $table->string('title')->unique;
+            $table->mediumText('description')->unique;
+            $table->integer('category');
+            $table->string('image')
+                  ->foreign('category')
+                  ->references('id')->on('categories')
+                  ->onDelete('cascade');
         });
     }
 
