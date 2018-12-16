@@ -28,10 +28,7 @@
 .inverse {
   background-color: #020b17;
   color: #d7dee1;
-
-  &.content-block{
-      @include rem(padding, 10rem 0);
-  }
+  
   .box-link {
       background-color: #020b17;
       border-color: #d7dee1;

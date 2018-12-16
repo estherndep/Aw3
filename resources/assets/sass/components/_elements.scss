@@ -9,13 +9,22 @@ html {
       padding: 0;
       position: relative;
 
-      @include breakpoint('xxxl') {
-        @include rem(font-size, map-get($typography, 'base-font-size') + 10px);
+      a, a:hover, a:active{
+        color: inherit;
+        text-decoration: none;
     }
+
+      @include breakpoint('xl') {
+        @include rem(font-size, map-get($typography, 'base-font-size') + 4px);
+      }
+
+      @include breakpoint('xxxl') {
+        @include rem(font-size, map-get($typography, 'base-font-size') + 14px);
+      }
 
       @include breakpoint('xxxxl') {
         @include rem(font-size, map-get($typography, 'base-font-size') + 20px);
-    }
+      }
 
       &.no-scroll{
           overflow: hidden;
@@ -23,13 +32,9 @@ html {
 
         h1,h2,h3,h4,h5{
             @include rem(margin-bottom, 1.5rem);
-        font-weight: 700;
+            font-weight: 300;
 
         &.title{
-            text-transform: uppercase;
-        }
-
-        a{
             text-transform: uppercase;
         }
         }
@@ -38,19 +43,19 @@ html {
         @include rem(font-size, map-get($typography, 'heading-one'));
 
         @include breakpoint('l') {
-            @include rem(font-size, (map-get($typography, 'heading-one') + 5px));
+            @include rem(font-size, (map-get($typography, 'heading-one') + 25px));
         }
 
         @include breakpoint('xxl') {
-            @include rem(font-size, (map-get($typography, 'heading-two') + 15px));
+            @include rem(font-size, (map-get($typography, 'heading-two') + 35px));
         }
 
         @include breakpoint('xxxl') {
-            @include rem(font-size, (map-get($typography, 'heading-two') + 25px));
+            @include rem(font-size, (map-get($typography, 'heading-two') + 60px));
         }
 
         @include breakpoint('xxxxl') {
-            @include rem(font-size, (map-get($typography, 'heading-two') + 40px));
+            @include rem(font-size, (map-get($typography, 'heading-two') + 70px));
         }
         }
     
@@ -70,7 +75,7 @@ html {
             }
 
             @include breakpoint('xxxxl') {
-                @include rem(font-size, (map-get($typography, 'heading-two') + 45px));
+                @include rem(font-size, (map-get($typography, 'heading-two') + 55px));
             }
         }
         
@@ -101,19 +106,19 @@ html {
             @include rem(font-size, map-get($typography, 'heading-four'));
         
             @include breakpoint('l') {
-                @include rem(font-size, (map-get($typography, 'heading-two') + 5px));
+                @include rem(font-size, (map-get($typography, 'heading-four') + 5px));
             }
 
             @include breakpoint('xxl') {
-                @include rem(font-size, (map-get($typography, 'heading-two') + 10px));
+                @include rem(font-size, (map-get($typography, 'heading-four') + 10px));
             }
 
             @include breakpoint('xxxl') {
-                @include rem(font-size, (map-get($typography, 'heading-two') + 20px));
+                @include rem(font-size, (map-get($typography, 'heading-four') + 20px));
             }
 
             @include breakpoint('xxxxl') {
-                @include rem(font-size, (map-get($typography, 'heading-two') + 35px));
+                @include rem(font-size, (map-get($typography, 'heading-four') + 35px));
             }
         }
         

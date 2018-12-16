@@ -18,7 +18,9 @@
 .content {
   .overlay {
     z-index: 6;
-    background-color: rgba(16, 23, 39, 0.3);
+    background-color: #00000038;
+    opacity: 1;
+    display: block;
 
   }
 }

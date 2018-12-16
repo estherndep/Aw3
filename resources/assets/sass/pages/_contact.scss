@@ -4,10 +4,6 @@
     margin-top: 20rem;
     flex-wrap: wrap;
     padding: 4rem 2rem;
-
-    @include breakpoint('s') {
-        margin-top: 30rem;
-    }
 }
 
 #image-block {
@@ -81,10 +77,12 @@ form {
 
     .image-wrapper {
         position: absolute;
+        top: 75vh;
         right: 0;
         width: 100%;
 
         @include breakpoint('xs') {
+            top: 65vh;
             right: 10%;
             width: 40%;
         }

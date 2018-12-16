@@ -7,26 +7,14 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      background-image: url(/img/abt-block.jpg);
-      min-height: 50vh;
-      // width: 100vw;
-
-      // @include breakpoint('s') {
-      //   height: 100vh;
-      //   width: 50vw;
-      // }
-    }
-    .head-parallax-content {
-      @extend .inverse;
-      min-height: 50vh;
-      // min-height: 50vw;
-      // width: 100vw;
-
-      // @include breakpoint('s') {
-      //   height: 100vh;
-      //   width: 50vw;
-      // }
+      min-height: 100%;
       
+      .overlay {
+        height: 100vh;
+      }
+      .text-holder-table {
+        height: 100vh;
+      }
     }
   }
 }

@@ -8,23 +8,14 @@
   top: 0;
   width: 100%;
   z-index: 9;
-
-  // &:hover{
-  //   @include breakpoint('m'){
-  //     background: rgba(16, 23, 39, 0.5);
-  //   }
-  // }
-
-  @include breakpoint('m'){
-    background: unset;
-  }
   
   .container-fluid{
       margin: auto;
       width: 90%;
 
     .nav-block{
-      @include rem('padding', 140px 30px);
+      @include rem('padding', 100px 15px 20px 30px);
+      @include transition(all 0.5s ease);
       background: $deep-blue;
       color: #fff;
       height: 100vh;
@@ -35,63 +26,32 @@
       text-transform: uppercase;
       width: 320px;
       z-index: 10;
-    
-      @include breakpoint('m'){
-        @include rem(margin-bottom, 30px);
-        background: unset;
-        display: inline-block;
-        float: right;
-        height: unset;
-        padding: 0;
-        position: relative;
-        right: 0;
-        vertical-align: middle;
-        width: unset;
+
+      &.side-drawer{
+        right: 0px;
       }
-    
+
       ul{
         display: inline-block;
         font-weight: 500;
         height: 100%;
         list-style: none;
         padding: 0;
-    
-        @include breakpoint('m'){
-          float: right;
-          padding: 0;
-          margin: 0;
-        }
-    
-          #main-content, #sub-content{
-            margin-bottom: 80px;
-    
-            @include breakpoint('m'){
-            display: inline-block;
-            margin: 0;
-            }
-    
+  
+          #main-content, .sub-content{
             li{
               width: 100%;
-    
-              @include breakpoint('m'){
-                width: unset;
-                display: inline-block;
-              }
-        
+
               p{
                 @include rem(font-size, 13px);
                 display: inline-block;
-    
-                @include breakpoint('m'){
-                  display: none;
-                }            
               }
         
-              a{
+              &.list-head, a{
                 @include transition(all .3s );
+                @include rem(padding, 4px 5px);
                 color:white;
                 display: inline-block;
-                padding: 8px 10px;
                 position: relative;
                 text-decoration: none;
                 text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
@@ -106,52 +66,39 @@
                   width: 1px;
                   height: 26px;
                   border-right: 1px solid white;
-                  @include breakpoint('m'){
-                    display: inline-block;
-                  }
                 }
 
-                &:hover{
-                  color: #d5d5d5;
-                }
-    
-                @include breakpoint('m'){
-                  padding: 0 20px;
-                  color:white;
+                &:hover {
+                  color: #6d7c90;
                 }
               }
             }
           }
     
           #main-content{
-            li{
-              a{
-                @include breakpoint(0, 'm'){
-                  @include rem(font-size, 30px);
-                  font-weight: 700;
-                }
+            @include rem(margin-bottom, 40px);
+
+            .list-head {
+              @include rem(font-size, 30px);
+              font-weight: 700;
+            }
+
+            .sub-content {
+              @include transition(all ease 0.3s);
+              height: 0;
+              overflow: hidden;
+
+              &.active {
+                @include rem(min-height, 100px);
+                overflow: visible;
               }
             }
           }
-        
-          #sub-content {
-            @include breakpoint(0, 'm'){
-              @include rem(padding-left, 8px);
-            }
-            li:last-child{
-              a{
-                &::after{
-                  display: none;
-                }
-              }
-            }
+
+          .sub-content {
+            @include rem(padding-left, 20px);
           }
         }
-    }
-    
-    .side-drawer{
-      @include transition(all 0.5s ease);
-      right: 0px;
     }
 
     .scl-icons{
@@ -170,9 +117,6 @@
       height: 40px;
       top: -8px;
       z-index: 10;
-      @include breakpoint('m'){
-        display: none;
-      }
     
       &.active{
         #burger{

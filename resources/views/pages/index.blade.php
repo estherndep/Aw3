@@ -4,16 +4,15 @@
     <div class="content">
         <div class="design"></div>
         <section id= "content-head">
-            <div class="page-intro"> 
-                    <div class="site-intro-text">
-                    </div>
+            <div class="page-intro">
                 <div class="slider-svg">
                     <div class="intro-text">
-                        <h2>AWTO.<br>MEITTED.<br>LIVING.</h2>
+                        <h2>AWTO.<br>MEITTED.<br>LIFESTYLE.</h2>
                     </div>
                     <img src="img/home/slider.svg" alt="">
                 </div>
                 <div id="head-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="overlay"></div>
                     <ul class="carousel-indicators">
                     <li data-target="#demo" data-slide-to="0" class="active"></li>
                     <li data-target="#demo" data-slide-to="1"></li>
@@ -31,7 +30,7 @@
             </div>
         </section>
 
-        <section class="content-block" id="about-block">
+        <section class="content-block about-block">
             <div class="block-quote">
                 <h2> 
                     Lorem ipsum dolor sit amet,
@@ -39,12 +38,11 @@
                 </h2>
             </div>
             <div class="inner row">
-                 <div class="" id="about-image">
+                 <div class="col-lg-6 about-image">
                     <div class="block-img" style="background-image: url(/img/home/about-block.jpeg);">
-                        <div class="overlay"></div>
                     </div>
                 </div>
-                <div class="" id="about-content">
+                <div class="col-lg-6 about-content">
                     <div class="text-holder-table">
                         <div class="text-holder-cell">
                             <p> 
@@ -122,7 +120,7 @@
                     <div class="block-img" style="background-image: url('img/home/home-slider2.jpeg');"></div>
                 </div>
             </div>
-        </div>
+        </section>
         
         <section class="content-block inverse" id="tis-block" >
             <div class="text-holder-table" id="tis-content">

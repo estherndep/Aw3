@@ -7,17 +7,8 @@
     display: table;
     table-layout: fixed;
     height: 100%;
-    width: 50vw;
-    padding-left:10%;
+    width: 100%;
     z-index: 7;
-
-    @include breakpoint('l'){
-        width: 40vw;
-    }
-
-    // @include breakpoint('xxl'){
-    //     width: 30vw;
-    // }
 
     .text-holder-cell{
         position: relative;
@@ -27,10 +18,10 @@
         vertical-align: middle;
 
         .title-holder{
+            font-family: Roboto;
+            font-weight: 300;
             text-transform: uppercase;
-            .button-holder{
-
-            }
+            text-align: center;
         }
     }
 }
@@ -38,6 +29,11 @@
 .content {
     position: relative;
    // overflow: hidden;
+   .content-block {
+       .title-holder {
+           text-align: left;
+       }
+   }
 }
 
 .sum {
@@ -107,6 +103,16 @@ a>div {
     position: relative;
     z-index: 7;
 
+    &.container{
+        @include breakpoint('xxxl'){
+            max-width: 60%;
+        }
+    }
+
+    &.inverse{
+        @include rem(padding, 10rem);
+    }
+
     .block-title{
         display: block;
         @include rem(margin-bottom, 80px);
@@ -142,15 +148,5 @@ a>div {
     @include breakpoint('l'){
         width: 50%;
         margin-left: 20%;
-    }
-}
-
-.content-block{
-    position: relative;
-
-    &.container{
-        @include breakpoint('xxxl'){
-            max-width: 60%;
-        }
     }
 }

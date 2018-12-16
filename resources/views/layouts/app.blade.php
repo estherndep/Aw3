@@ -22,10 +22,16 @@
 				<nav class="nav-block" id ="top-nav">
 					<ul>
 						<div id="main-content">
-							<li><p>01</p><a href="{{route('projects')}}">Projects</a></li>
-							<li><p>02</p><a href="{{route('services')}}">Services</a></li>
+							<li class="list-head"><p>01</p><a href="/">Home</a></li>
+							<li class="list-head"><p>02</p><a href="{{route('projects')}}">Projects</a></li>
+							<li class="list-head" id="service"><p>03</p><span>Services</span></li>
+							<div class="sub-content" id="service-links">
+									<li><a href="{{url('/services/residential')}}">Residential</a></li>
+									<li><a href="{{url('/services/commercial')}}">Commercial</a></li>
+									<li><a href="{{url('/services/hospitality')}}">Hospitality</a></li>
+								</div>
 						</div>
-						<div id="sub-content">
+						<div class="sub-content">
 							<li><a style="color: darkred">TIS</a></li>
 							<li><a href="{{route('about')}}">About</a></li>
 							<li><a href="{{route('blog.index')}}">Blog</a></li>

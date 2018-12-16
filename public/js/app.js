@@ -21209,6 +21209,10 @@ $('#icon').on('click', function () {
     $('body').toggleClass('no-scroll');
 });
 
+$('#service').on('click', function () {
+    $('#service-links').toggleClass('active');
+});
+
 $(window).on('resize', function () {
     if (window.innerWidth > 990 && topNav.className != 'nav-block') {
         icon.click();
