@@ -1,0 +1,45 @@
+.box-link {
+  @include rem(padding, 2px 20px);
+  border-color: $deep-blue;
+  border-style: solid;
+  border-width: 3px;
+  color: $deep-blue;
+  display: inline-block;
+  margin-top: 50px;
+  text-transform: uppercase;
+
+  a {
+      display: block;
+      color: inherit;
+      text-align: center;
+  }
+
+  a:hover {
+      text-decoration: none;
+      color: inherit
+  }
+}
+
+.box-link:hover {
+  background: #020b17;
+  color: #d7dee1;
+}
+
+.inverse {
+  background-color: #020b17;
+  color: #d7dee1;
+  
+  .box-link {
+      background-color: #020b17;
+      border-color: #d7dee1;
+      a {
+          color: #d7dee1;
+      }
+  }
+  .box-link:hover {
+      background: #d7dee1;
+      a {
+          color: #020b17;
+      }
+  }
+}

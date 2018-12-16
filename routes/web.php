@@ -14,7 +14,8 @@
 Route::get('/', 'IndexController@index')->name('index');
 Route::get('/about', 'PageController@about')->name('about');
 Route::get('/projects', 'ProjectController@index')->name('projects');
-Route::get('/services', 'PageController@services')->name('services');
+Route::get('/services/{title}', 'CategoryController@show');
+
 Route::get('/contact', 'ContactController@create')->name('contact');
 Route::post('/contact',  'ContactController@mailToAdmin'); 
 Route::get('/tis',  'PageController@tis')->name('tis'); 

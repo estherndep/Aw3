@@ -44,11 +44,10 @@
 			</div>     
 
 		</div>   
-
+		<div class="image-wrapper">
+			<div class="image-block"></div>
+		</div> 
 	</div>
-		
-	<div class="col-12 col-md-5" id="image-block"></div> 
-
 	<div id="message-wrapper">
 
 		<div class="col-12 col-md-6" id="message-text">

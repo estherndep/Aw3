@@ -1,0 +1,179 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.nav-header{
+  padding-top: 3%;
+  @include transition(all 1s);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  
+  .container-fluid{
+      margin: auto;
+      width: 90%;
+
+    .nav-block{
+      @include rem('padding', 100px 15px 20px 30px);
+      @include transition(all 0.5s ease);
+      background: $deep-blue;
+      color: #fff;
+      height: 100vh;
+      overflow: scroll;
+      position: fixed;
+      right: -320px;
+      top: 0px;
+      text-transform: uppercase;
+      width: 320px;
+      z-index: 10;
+
+      &.side-drawer{
+        right: 0px;
+      }
+
+      ul{
+        display: inline-block;
+        font-weight: 500;
+        height: 100%;
+        list-style: none;
+        padding: 0;
+  
+          #main-content, .sub-content{
+            li{
+              width: 100%;
+
+              p{
+                @include rem(font-size, 13px);
+                display: inline-block;
+              }
+        
+              &.list-head, a{
+                @include transition(all .3s );
+                @include rem(padding, 4px 5px);
+                color:white;
+                display: inline-block;
+                position: relative;
+                text-decoration: none;
+                text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+
+                &::after{
+                  @include transform(translateY(-50%));
+                  content: '';
+                  display: none;
+                  position: absolute;
+                  right: 0;
+                  top: 50%;
+                  width: 1px;
+                  height: 26px;
+                  border-right: 1px solid white;
+                }
+
+                &:hover {
+                  color: #6d7c90;
+                }
+              }
+            }
+          }
+    
+          #main-content{
+            @include rem(margin-bottom, 40px);
+
+            .list-head {
+              @include rem(font-size, 30px);
+              font-weight: 700;
+            }
+
+            .sub-content {
+              @include transition(all ease 0.3s);
+              height: 0;
+              overflow: hidden;
+
+              &.active {
+                @include rem(min-height, 100px);
+                overflow: visible;
+              }
+            }
+          }
+
+          .sub-content {
+            @include rem(padding-left, 20px);
+          }
+        }
+    }
+
+    .scl-icons{
+      @include rem(margin-bottom, 30px);
+      position: relative;
+      color: white;
+      display: inline-block;      
+    }
+    
+    #icon{
+      position: relative;
+      float: right;
+      width: 4%;
+      min-width: 35px;
+      max-width: 40px;
+      height: 40px;
+      top: -8px;
+      z-index: 10;
+    
+      &.active{
+        #burger{
+          background: rgba(255, 255, 255, 0);
+          box-shadow: none;
+    
+          &::before {
+            top: 0;
+            transform: rotate(45deg);
+          }
+          
+          &::after {
+            top: 0;
+            transform: rotate(-45deg);
+          }
+        }
+    
+      }
+    
+      #burger {
+        width: 75%;
+        height: 2px;
+        background: rgba(255, 255, 255, 1);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        transition: 0.5s;
+    
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background: rgba(255, 255, 255, 1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          transition: 0.5s; 
+        }
+      
+        &::before {
+          top: -10px;
+        }
+        
+        &::after {
+          top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:768px){
+  nav .scl-icons{
+    font-size: 1rem;
+    width: 10%;
+  }
+}
+

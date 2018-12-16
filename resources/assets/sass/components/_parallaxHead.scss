@@ -1,0 +1,20 @@
+.content {
+  .parallax-head-block {
+    margin: 0;
+    .menu-backdrop{
+      background-color: $deep-blue;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 100%;
+      
+      .overlay {
+        height: 100vh;
+      }
+      .text-holder-table {
+        height: 100vh;
+      }
+    }
+  }
+}

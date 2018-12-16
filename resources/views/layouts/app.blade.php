@@ -12,45 +12,47 @@
 	</head>
 
 <body>
-	<div id="app">
-    <nav>
-		<div class="scl-icons">
-			<i class="fab fa-twitter"></i>
-			<i class="fab fa-instagram"></i>
-			<i class="fab fa-facebook-f"></i>
-		</div>
-		
-        <div id="icon">
-            <div id="burger">
-            </div>
-        </div>
-        <div id = "full-overlay"></div>
-		<div id ="side-drawer">
-			<div class="container">
-				<ul>
-					<div id="main-content">
-						<li><p>01</p><a href="{{route('projects')}}">Projects</a></li>
-						<li><p>02</p><a href="{{route('services')}}">Services</a></li>
-					</div>
-					<div id="sub-content">
-						<li><a style="color: darkred">TIS</a></li>
-						<li><a href="{{route('about')}}">About</a></li>
-						<li><a href="{{route('blog.index')}}">Blog</a></li>
-						<li><a href="{{route('contact')}}">Contact us</a></li>
-					</div>
-				</ul>
+		<header class="nav-header">
+			<div class="container-fluid">
+				<div class="scl-icons">
+					<i class="fab fa-twitter"></i>
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-facebook-f"></i>
+				</div>
+				<nav class="nav-block" id ="top-nav">
+					<ul>
+						<div id="main-content">
+							<li class="list-head"><p>01</p><a href="/">Home</a></li>
+							<li class="list-head"><p>02</p><a href="{{route('projects')}}">Projects</a></li>
+							<li class="list-head" id="service"><p>03</p><span>Services</span></li>
+							<div class="sub-content" id="service-links">
+									<li><a href="{{url('/services/residential')}}">Residential</a></li>
+									<li><a href="{{url('/services/commercial')}}">Commercial</a></li>
+									<li><a href="{{url('/services/hospitality')}}">Hospitality</a></li>
+								</div>
+						</div>
+						<div class="sub-content">
+							<li><a style="color: darkred">TIS</a></li>
+							<li><a href="{{route('about')}}">About</a></li>
+							<li><a href="{{route('blog.index')}}">Blog</a></li>
+							<li><a href="{{route('contact')}}">Contact us</a></li>
+						</div>
+					</ul>
+				</nav>
+				<div id="icon">
+						<div id="burger">
+						</div>
+				</div>
 			</div>
-		</div>
-    </nav>
+		</header>
+		<div class="overlay full"></div>
 
 	@yield('content')
-	
 	<footer>
 		<p>COPYRIGHT © 2018 AWTOMEDDIA. ALL RIGHTS RESERVED.</p>
 	</footer>
-
-	</div>
+	<script src = "{{asset('js/jquery.min.js')}}"></script>
 	<script src = "{{asset('js/app.js')}}"></script>
-	
+	@yield('scripts')
 </body>
 </html>

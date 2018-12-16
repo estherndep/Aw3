@@ -4,8 +4,23 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require("./bootstrap");
-require("./index");
+/*jshint esversion: 6 */ 
+
+import "bootstrap";
+
+import 'owl.carousel';
+
+
+// Import jQuery ui
+import 'jquery-ui';
+
+//custom js
+import "./index";
+import "./services";
+
+//third-party
+
+
 
 console.log('mounted');
 
