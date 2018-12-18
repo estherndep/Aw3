@@ -1,19 +1,4 @@
 .content{
-    // #main {
-    //     #img-row {
-    //         @extend .container,
-    //         .col-10,
-    //         .m-auto,
-    //         .position-relative;
-    //         bottom: 9vw;
-    //         z-index: 8;
-    //     }
-    //     .sngl-img {
-    //         @extend .col-6,
-    //         .col-md-3;
-    //         height: 18vw;
-    //     }
-    // }
     #service-head-block{
         color: white;
         height:100vh;
@@ -36,6 +21,18 @@
 
             @include breakpoint('s') {
                 @include rem('height', 240px)
+            }
+        }
+
+        .service-description {
+            @extend .col-4;
+
+        }
+
+        .img-block {
+            @extend .col-4;
+            .service-description {
+
             }
         }
     }        

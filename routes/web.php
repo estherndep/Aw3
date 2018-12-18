@@ -43,3 +43,8 @@ Route::prefix('admin')->group(function() {
     Route::get('/password/reset/{token}', 'Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');
 });
   
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

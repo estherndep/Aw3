@@ -97,6 +97,11 @@ a>div {
     }
 }
 
+.img-block {
+    background-size: cover ;
+    height: 100%;
+}
+
 .content-block{
     @include rem(padding, 200px 0);
     margin: auto;
