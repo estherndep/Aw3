@@ -14,17 +14,15 @@
 <body>
 		<header class="nav-header">
 			<div class="container-fluid">
-				<div class="scl-icons">
-					<i class="fab fa-twitter"></i>
-					<i class="fab fa-instagram"></i>
-					<i class="fab fa-facebook-f"></i>
+				<div class="logo-container"> 
+					<div class="logo-wrapper"></div>
 				</div>
 				<nav class="nav-block" id ="top-nav">
 					<ul>
 						<div id="main-content">
-							<li class="list-head"><p>01</p><a href="/">Home</a></li>
-							<li class="list-head"><p>02</p><a href="{{route('projects')}}">Projects</a></li>
-							<li class="list-head" id="service"><p>03</p><span>Services</span></li>
+							<li class="list-head"><p>01</p><h3><a href="/">Home</a></h3></li>
+							<li class="list-head"><p>02</p><h3><a href="{{route('projects')}}">Projects</a></h3></li>
+							<li class="list-head" id="service"><p>03</p><h3><span>Services</span></h3></li>
 							<div class="sub-content" id="service-links">
 									<li><a href="{{url('/services/residential')}}">Residential</a></li>
 									<li><a href="{{url('/services/commercial')}}">Commercial</a></li>
@@ -36,6 +34,11 @@
 							<li><a href="{{route('about')}}">About</a></li>
 							<li><a href="{{route('blog.index')}}">Blog</a></li>
 							<li><a href="{{route('contact')}}">Contact us</a></li>
+						</div>
+						<div class="scl-icons">
+							<i class="fab fa-twitter"></i>
+							<i class="fab fa-instagram"></i>
+							<i class="fab fa-facebook-f"></i>
 						</div>
 					</ul>
 				</nav>
