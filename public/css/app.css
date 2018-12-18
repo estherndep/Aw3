@@ -1171,30 +1171,17 @@ a > div:hover {
   margin-left: 30px;
   margin-left: 3rem;
   background-color: #020b17;
-  width: 25%;
   display: inline-block;
 }
 
 .nav-header .container-fluid .logo-container .logo-wrapper {
-  height: 40px;
-  height: 4rem;
-  margin: 10px;
-  margin: 1rem;
-  width: 40px;
-  width: 4rem;
-  background-image: url(/img/home/main-sym.png);
-  display: inline-block;
-  background-size: cover;
-}
-
-.nav-header .container-fluid .logo-wrapper {
-  height: 40px;
-  height: 4rem;
-  margin: 10px;
-  margin: 1rem;
-  width: 40px;
-  width: 4rem;
-  background-image: url(/img/home/main-sym.png);
+  height: 45px;
+  height: 4.5rem;
+  margin: 15px;
+  margin: 1.5rem;
+  width: 180px;
+  width: 18rem;
+  background-image: url(/img/home/logo-light.png);
   display: inline-block;
   background-size: cover;
 }

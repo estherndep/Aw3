@@ -16,26 +16,18 @@
     .logo-container{
       @include rem(margin-left, 30px);
       background-color: $deep-blue;
-      width: 25%;
       display: inline-block;
 
       .logo-wrapper{
-        @include rem(height, 40px);
-        @include rem(margin, 10px);
-        @include rem(width, 40px);
-        background-image: url(/img/home/main-sym.png);
+        @include rem(height, 45px);
+        @include rem(margin, 15px);
+        @include rem(width, 180px);
+        background-image: url(/img/home/logo-light.png);
         display: inline-block;
         background-size: cover;
       }
     }
-    .logo-wrapper{
-      @include rem(height, 40px);
-      @include rem(margin, 10px);
-      @include rem(width, 40px);
-      background-image: url(/img/home/main-sym.png);
-      display: inline-block;
-      background-size: cover;
-    }
+
     .nav-block{
       @include transition(all 0.5s ease);
       background: $deep-blue;
