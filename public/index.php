@@ -21,7 +21,8 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
-echo 'hello';
+require __DIR__.'/../vendor/autoload.php';
+
 /*
 |--------------------------------------------------------------------------
 | Turn On The Lights
@@ -34,6 +35,7 @@ echo 'hello';
 |
 */
 
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
 /*
 |--------------------------------------------------------------------------
