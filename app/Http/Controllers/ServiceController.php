@@ -51,9 +51,12 @@ class ServiceController extends Controller
      * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function show(Service $service)
+    public function show($category, $id)
     {
-        //
+        $category = Category::where('title', $category)->first();
+        $service = Service::where('id', $id)->first();
+
+        return view('services.single', compact('service', 'category'));
     }
 
     /**

@@ -17,7 +17,7 @@
         <section class="service-content row inverse">
                 @foreach($services as $service)
                         <div class="service" style="background-image: url(/img/services/{{$category->title}}/{{$service->image}})">
-                                <a href="#">
+                                <a href="/services/{{$category->title}}/{{$service->id}}">
                                         <div class="text-holder-table">
                                                 <div class="text-holder-cell">
                                                         <div class="title-holder">

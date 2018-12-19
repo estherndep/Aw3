@@ -8,17 +8,19 @@
                 <div class="text-holder-table">
                     <div class="text-holder-cell">
                         <div class="title-holder">
-                            <h1>{{$category->title}} services</h1>
+                            <h1>{{$service->title}}</h1>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="service-content row inverse">
-            <div class="service-description">
+        <section class="service-content inverse">
+            <div class="service-description-grid row">
+                <div class="service-description">
+                </div>
+                <div class="service-description img-block" style="background-image: url(/img/services/{{$category->title}}/head.jpeg)"></div>
+                <div class="service-description"></div>
             </div>
-            <div class="img-block col-4"></div>
-            <div class="service-description"></div>
             <div class="img-block col-12">
                 <div class="service-description">
                     <div class="overlay"></div>
